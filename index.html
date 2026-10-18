@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đồng Hành 30 Ngày – Làm Video Bán Hàng Bằng AI</title>
+<meta name="description" content="Làm video bán hàng bằng AI chỉ vài phút một video. Tặng 2 tool AI làm video và 10 skill video viral, kèm 30 ngày Phạm Dinh AI đồng hành hướng dẫn đến khi bạn tự làm được.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif'] },
+        colors: {
+          ink: '#070B16', navy: '#0B1224', navy2: '#111A33', line: '#1E2A4A',
+          gold: '#F5B83D', gold2: '#FFD978', flame: '#FF5A1F', flame2: '#FF8A3D',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #070B16; color: #E8ECF6; }
+  .text-grad { background: linear-gradient(90deg, #FFD978, #F5B83D 40%, #FF8A3D 75%, #FF5A1F); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .bg-cta { background: linear-gradient(90deg, #FF5A1F, #FF8A3D 50%, #F5B83D); }
+  .card { background: linear-gradient(160deg, rgba(17,26,51,.92), rgba(11,18,36,.92)); border: 1px solid #1E2A4A; }
+  .glow { box-shadow: 0 0 0 1px rgba(245,184,61,.35), 0 20px 60px -20px rgba(255,90,31,.45); }
+  .cta-pulse { animation: pulse 2.2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,138,61,.55); } 50% { box-shadow: 0 0 0 14px rgba(255,138,61,0); } }
+  .marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .marquee-track { display: flex; width: max-content; animation: scroll 70s linear infinite; }
+  .marquee.dung .marquee-track { animation-play-state: paused; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  @keyframes scroll { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .blob { position: absolute; border-radius: 9999px; filter: blur(110px); opacity: .22; pointer-events: none; }
+  details > summary::-webkit-details-marker { display: none; }
+  /* Chỗ cần điền số liệu thật – nhìn thấy rõ để không quên thay trước khi chạy quảng cáo */
+  .can-dien { outline: 1px dashed #F5B83D; outline-offset: 2px; background: rgba(245,184,61,.12); border-radius: 4px; padding: 0 3px; }
+  .no-draft .can-dien { outline: none; background: none; padding: 0; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation-duration: 120s; } .cta-pulse { animation: none; } .reveal { opacity: 1; transform: none; } }
+</style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+<!-- ===== THANH ĐẾM NGƯỢC TRÊN CÙNG ===== -->
+<div class="sticky top-0 z-40 bg-ink/90 backdrop-blur border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-semibold">
+    <span class="text-slate-300">🎁 Tặng 2 tool + 10 skill trị giá <b class="text-gold">2.388.000đ</b></span>
+    <span data-co-han class="hidden items-center gap-2"><span class="text-slate-300">kết thúc sau</span><span class="countdown tabular-nums font-black text-grad text-sm sm:text-base"></span></span>
+    <span data-khong-han class="text-flame2 font-bold">· Chỉ nhận 30 học viên</span>
+    <a href="#dang-ky" class="hidden sm:inline-flex rounded-full bg-cta text-ink font-black px-4 py-1.5 text-xs uppercase">Giữ suất</a>
+  </div>
+</div>
+
+<main class="relative overflow-x-clip">
+  <div class="blob bg-flame w-[520px] h-[520px] -top-40 -right-40"></div>
+  <div class="blob bg-gold w-[420px] h-[420px] top-[60%] -left-40"></div>
+
+  <!-- ===== 1 + 2. TIÊU ĐỀ CHÍNH & TIÊU ĐỀ PHỤ ===== -->
+  <section class="relative max-w-6xl mx-auto px-4 pt-8 pb-12 sm:pt-12">
+    <div class="flex flex-wrap justify-center gap-2 text-[11px] sm:text-xs font-bold">
+      <span class="rounded-full border border-line bg-navy2 px-3 py-1.5">💻 Online qua Zoom</span>
+      <span class="rounded-full border border-line bg-navy2 px-3 py-1.5">📅 Đồng hành 30 ngày</span>
+      <span class="rounded-full border border-flame/60 bg-flame/10 text-flame2 px-3 py-1.5">🔥 Chỉ nhận 30 học viên</span>
+    </div>
+
+    <div class="mt-8 grid lg:grid-cols-[1.25fr_.75fr] gap-10 items-center">
+      <div class="text-center lg:text-left">
+        <h1 class="text-[28px] leading-[1.2] sm:text-[44px] lg:text-[52px] font-black uppercase tracking-tight">
+          Làm video bán hàng <span class="text-grad">bằng AI</span><br>
+          <span class="bg-gold text-ink px-3 rounded-lg [box-decoration-break:clone] [-webkit-box-decoration-break:clone] leading-[1.45]">chỉ vài phút một video</span>
+        </h1>
+        <p class="mt-5 text-lg sm:text-2xl font-extrabold text-white">Không quay · Không lộ mặt · Không cần giỏi công nghệ</p>
+        <p class="mt-5 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          <b class="text-white">Tặng 2 tool AI làm video + 10 skill video viral</b>, kèm <b class="text-white">30 ngày Dinh đồng hành</b> hướng dẫn đến khi bạn tự làm được.
+          Dành cho <b class="text-gold2 underline decoration-gold/60 underline-offset-4">chủ shop, chủ doanh nghiệp, người làm tiếp thị liên kết (affiliate) và người kinh doanh tự do</b> đang mất cả ngày cho một video, cạn ý tưởng, thuê editor thì đắt mà vẫn không ra đơn.
+        </p>
+        <div class="mt-7 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center">
+          <a href="#dang-ky" class="cta-pulse inline-flex items-center justify-center rounded-2xl bg-cta text-ink font-black uppercase px-6 py-4 text-sm sm:text-base leading-snug text-center">
+            ⚡ Tôi muốn tự làm video bán hàng bằng AI ngay
+          </a>
+        </div>
+        <p class="mt-3 text-sm text-slate-400">🔥 Chỉ nhận 30 học viên · 🛡️ Hoàn tiền 100% trong 7 ngày</p>
+      </div>
+
+      <!-- Video mẫu do bộ công cụ làm ra -->
+      <div class="relative max-w-sm mx-auto w-full" id="video-mau">
+        <div class="card glow rounded-3xl p-3">
+          <div class="grid grid-cols-2 gap-2">
+          <button type="button" data-vd="0" class="group relative rounded-2xl overflow-hidden border border-line hover:border-gold transition"><img src="images/v-giadung.jpg" alt="Video Review gia dụng làm bằng bộ công cụ AI" class="w-full aspect-[9/14] object-cover group-hover:scale-105 transition duration-500"><span class="absolute inset-0 flex items-center justify-center"><span class="w-11 h-11 rounded-full bg-black/55 border-2 border-white/80 flex items-center justify-center text-white pl-0.5 group-hover:bg-flame group-hover:border-flame transition">▶</span></span><span class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-6 text-left text-xs font-bold text-white">Review gia dụng</span></button>
+          <button type="button" data-vd="1" class="group relative rounded-2xl overflow-hidden border border-line hover:border-gold transition"><img src="images/v-doan.jpg" alt="Video Đồ ăn làm bằng bộ công cụ AI" class="w-full aspect-[9/14] object-cover group-hover:scale-105 transition duration-500"><span class="absolute inset-0 flex items-center justify-center"><span class="w-11 h-11 rounded-full bg-black/55 border-2 border-white/80 flex items-center justify-center text-white pl-0.5 group-hover:bg-flame group-hover:border-flame transition">▶</span></span><span class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-6 text-left text-xs font-bold text-white">Đồ ăn</span></button>
+          <button type="button" data-vd="5" class="group relative rounded-2xl overflow-hidden border border-line hover:border-gold transition"><img src="images/v-thuonghieu.jpg" alt="Video Thương hiệu cá nhân làm bằng bộ công cụ AI" class="w-full aspect-[9/14] object-cover group-hover:scale-105 transition duration-500"><span class="absolute inset-0 flex items-center justify-center"><span class="w-11 h-11 rounded-full bg-black/55 border-2 border-white/80 flex items-center justify-center text-white pl-0.5 group-hover:bg-flame group-hover:border-flame transition">▶</span></span><span class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-6 text-left text-xs font-bold text-white">Thương hiệu cá nhân</span></button>
+          <button type="button" data-vd="8" class="group relative rounded-2xl overflow-hidden border border-line hover:border-gold transition"><img src="images/v-thucung.jpg" alt="Video Thú cưng làm bằng bộ công cụ AI" class="w-full aspect-[9/14] object-cover group-hover:scale-105 transition duration-500"><span class="absolute inset-0 flex items-center justify-center"><span class="w-11 h-11 rounded-full bg-black/55 border-2 border-white/80 flex items-center justify-center text-white pl-0.5 group-hover:bg-flame group-hover:border-flame transition">▶</span></span><span class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-6 text-left text-xs font-bold text-white">Thú cưng</span></button>
+          </div>
+          <p class="mt-3 text-center text-sm font-bold text-white">🎬 Video làm bằng bộ công cụ AI</p>
+          <p class="text-center text-xs text-slate-400 pb-1">Bấm vào để xem video mẫu</p>
+        </div>
+        <div class="absolute -top-3 -right-2 sm:-right-5 rotate-6 rounded-2xl bg-flame text-white font-black px-3 py-2 text-sm shadow-lg">Không quay · Không lộ mặt</div>
+      </div>
+    </div>
+
+    <!-- 4 ý chính: nỗi đau · dành cho ai · giá trị · quà tặng -->
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
+      <a href="#noi-dau" class="card rounded-2xl p-3.5 sm:p-5 hover:border-flame transition block">
+        <p class="text-2xl">😩</p>
+        <p class="mt-2 text-[10px] sm:text-xs font-black uppercase tracking-wider sm:tracking-widest text-flame2">Vấn đề của bạn</p>
+        <p class="mt-1 text-[13px] sm:text-base font-bold text-white leading-snug">Mất cả ngày cho một video, cạn ý tưởng, thuê editor thì đắt mà vẫn không ra đơn.</p>
+      </a>
+      <a href="#danh-cho-ai" class="card rounded-2xl p-3.5 sm:p-5 hover:border-gold transition block">
+        <p class="text-2xl">🎯</p>
+        <p class="mt-2 text-[10px] sm:text-xs font-black uppercase tracking-wider sm:tracking-widest text-gold">Dành cho ai</p>
+        <p class="mt-1 text-[13px] sm:text-base font-bold text-white leading-snug">Chủ shop, chủ doanh nghiệp, người làm affiliate, người bận rộn, ngại lên hình – mọi ngành nghề.</p>
+      </a>
+      <a href="#bao-gia" class="card rounded-2xl p-3.5 sm:p-5 hover:border-gold transition block">
+        <p class="text-2xl">💎</p>
+        <p class="mt-2 text-[10px] sm:text-xs font-black uppercase tracking-wider sm:tracking-widest text-gold">Giá trị bạn nhận</p>
+        <p class="mt-1 text-[13px] sm:text-base font-bold text-white leading-snug">2 tool AI + 10 skill + hướng dẫn tạo skill riêng + đăng bài tự động đa nền tảng + 30 ngày chữa bài từng người. <span class="text-gold2">Trị giá hơn 5.387.000đ</span></p>
+      </a>
+      <a href="#bao-gia" class="card rounded-2xl p-3.5 sm:p-5 border-gold/60 hover:border-gold transition block">
+        <p class="text-2xl">🎁</p>
+        <p class="mt-2 text-[10px] sm:text-xs font-black uppercase tracking-wider sm:tracking-widest text-gold">Quà tặng</p>
+        <p class="mt-1 text-[13px] sm:text-base font-bold text-white leading-snug">Tool đa ngành review bán hàng + Tool 1 ảnh xây kênh đa nền tảng + 10 skill video viral. <span class="text-gold2">Trị giá 2.388.000đ</span></p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== 3. KHOÉT SÂU NỖI ĐAU ===== -->
+  <section id="noi-dau" class="relative max-w-6xl mx-auto px-4 py-14 reveal scroll-mt-16">
+    <p class="text-center text-xs font-bold uppercase tracking-[.25em] text-flame2">Thành thật với chính mình</p>
+    <h2 class="mt-3 text-center text-2xl sm:text-4xl font-black uppercase leading-tight">Bạn có đang mắc kẹt trong<br><span class="inline-block mt-2 bg-flame text-white px-3 rounded-lg">5 "cơn ác mộng" làm video</span> này?</h2>
+    <div class="mt-10 grid md:grid-cols-2 gap-4">
+      <div class="card rounded-3xl p-6">
+        <h3 class="font-black text-lg text-white"><span class="text-flame2">1.</span> LÀM MỘT VIDEO MẤT CẢ NGÀY – MUỐN ĐĂNG MỖI NGÀY MÀ KHÔNG KỊP</h3>
+        <ul class="mt-4 space-y-3 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+          <li>• <b class="text-white">Quay, dựng, chèn chữ mất trọn một ngày</b> cho một video 30 giây, trong khi việc bán hàng còn chờ bạn.</li>
+          <li>• <b class="text-white">Biết phải đăng đều mỗi ngày,</b> nhưng làm tay thì không thể ra đủ video.</li>
+          <li>• <b class="text-white">Càng làm càng đuối:</b> vài tuần là bỏ dở, kênh bán hàng lại bỏ hoang.</li>
+        </ul>
+      </div>
+      <div class="card rounded-3xl p-6">
+        <h3 class="font-black text-lg text-white"><span class="text-flame2">2.</span> CẠN Ý TƯỞNG: NGỒI HÀNG GIỜ KHÔNG BIẾT HÔM NAY LÀM VIDEO GÌ</h3>
+        <ul class="mt-4 space-y-3 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+          <li>• <b class="text-white">Mở điện thoại lên là đầu óc trống rỗng:</b> lướt cả buổi xem người khác làm gì, cuối cùng vẫn không biết bắt đầu từ đâu.</li>
+          <li>• <b class="text-white">Copy xu hướng thì luôn chậm một bước:</b> đến lúc bạn làm xong, trào lưu đã qua.</li>
+          <li>• <b class="text-white">Không biết dạng video nào hợp sản phẩm của mình,</b> làm theo cảm tính rồi tự hỏi vì sao không ai xem.</li>
+        </ul>
+      </div>
+      <div class="card rounded-3xl p-6">
+        <h3 class="font-black text-lg text-white"><span class="text-flame2">3.</span> ĐỐT TIỀN: THIẾT BỊ, EDITOR, QUẢNG CÁO – ĐƠN VẪN ĐỨNG YÊN</h3>
+        <ul class="mt-4 space-y-3 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+          <li>• <b class="text-white">Mua điện thoại xịn, đèn, micro, phông nền</b> hàng chục triệu – nhưng thiết bị không tự làm ra video.</li>
+          <li>• <b class="text-white">Thuê editor, agency 15–20 triệu mỗi tháng:</b> hết tiền là hết video, và bạn phụ thuộc hoàn toàn vào người khác.</li>
+          <li>• <b class="text-white">Chi phí quảng cáo mỗi quý một đắt:</b> đơn hàng phải "mua" bằng tiền thay vì đến tự nhiên từ video.</li>
+        </ul>
+      </div>
+      <div class="card rounded-3xl p-6">
+        <h3 class="font-black text-lg text-white"><span class="text-flame2">4.</span> VIDEO LÀM RA KHÔNG BÁN ĐƯỢC HÀNG</h3>
+        <ul class="mt-4 space-y-3 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+          <li>• <b class="text-white">Đăng lên vài chục lượt xem,</b> không một bình luận hỏi giá, không một tin nhắn đặt hàng.</li>
+          <li>• <b class="text-white">Làm affiliate mà video không ra đơn,</b> gắn giỏ hàng cả tháng chưa đủ tiền cà phê.</li>
+          <li>• <b class="text-white">Đối thủ cùng ngành ra video đều đặn:</b> khách hàng thấy họ mỗi ngày, tin họ, và mua của họ.</li>
+        </ul>
+      </div>
+      <div class="card rounded-3xl p-6 md:col-span-2 border-flame/50">
+        <h3 class="font-black text-lg text-white"><span class="text-flame2">5.</span> SỢ LÊN HÌNH, SỢ CÔNG NGHỆ, RỐI GIỮA HÀNG CHỤC CÔNG CỤ AI</h3>
+        <ul class="mt-4 grid md:grid-cols-3 gap-4 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+          <li>• <b class="text-white">Ngại xuất hiện trước ống kính:</b> sợ bị chê, sợ người quen nhìn thấy – nhưng không làm thì doanh số cứ teo tóp.</li>
+          <li>• <b class="text-white">Mở công cụ AI ra là rối,</b> không biết dùng cái nào, bấm vào đâu, làm sao ra được video hoàn chỉnh.</li>
+          <li>• <b class="text-white">Câu hỏi âm thầm mỗi tối:</b> <i>"Hay là mình đã chậm, đã không theo kịp thời đại này nữa rồi?"</i></li>
+        </ul>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-base sm:text-lg text-slate-200 max-w-3xl mx-auto">
+      Nếu bạn gật đầu dù chỉ với một dòng ở trên, thì vấn đề <b class="text-gold">không nằm ở bạn</b>. Bạn chỉ đang thiếu <b class="text-gold">đúng công cụ</b> – và một người chịu đồng hành cùng bạn đủ lâu để bạn dùng thành thạo nó.
+    </p>
+  </section>
+
+  <!-- ===== 4. UY TÍN CÁ NHÂN ===== -->
+  <section class="max-w-5xl mx-auto px-4 py-14 reveal">
+    <div class="card glow rounded-3xl p-6 sm:p-10 grid md:grid-cols-[220px_1fr] gap-8 items-center">
+      <img src="images/companion.jpg" alt="Phạm Dinh AI – người đồng hành" class="w-44 h-44 md:w-56 md:h-56 mx-auto rounded-full object-cover border-4 border-gold/70">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[.25em] text-gold">Người làm ra bộ công cụ này</p>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-black"><span class="text-grad">Phạm Dinh AI</span></h2>
+        <p class="mt-1 text-slate-300">Người kinh doanh tự xây công cụ AI làm video cho chủ shop, chủ doanh nghiệp và người làm affiliate</p>
+        <ul class="mt-5 space-y-2.5 text-sm sm:text-base">
+          <li class="flex gap-3"><span class="text-gold">★</span><span>Tự tay xây dựng <b class="text-white">5 ứng dụng AI sản xuất video tự động</b> đang được các chủ shop sử dụng hằng ngày – từ video bán hàng đa ngành, vlog storyboard, hoạt hình người que, nhân vật 3D đến video thời trang.</span></li>
+          <li class="flex gap-3"><span class="text-gold">★</span><span>Đã giải mã <b class="text-white">10 dạng video viral</b> và đúc kết thành <b class="text-white">tư duy làm được bất kỳ dạng video nào</b>, cho mọi ngành: gia dụng, ẩm thực, bất động sản, mẹ và bé, thú cưng, thương hiệu cá nhân, TVC, phim ngắn drama…</span></li>
+          <li class="flex gap-3"><span class="text-gold">★</span><span>Khách đã dùng app phản hồi: <b class="text-white">"mới làm quen thôi nhưng thấy dễ"</b>, <b class="text-white">"support liên tục trên nhóm"</b>.</span></li>
+          <li class="flex gap-3"><span class="text-gold">★</span><span>Trực tiếp hướng dẫn và hỗ trợ người dùng qua Zoom và nhóm Zalo riêng.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. LỢI ÍCH – TRANSFORMATION ===== -->
+  <section class="max-w-6xl mx-auto px-4 py-14 reveal">
+    <p class="text-center text-xs font-bold uppercase tracking-[.25em] text-gold">Sau 30 ngày đồng hành</p>
+    <h2 class="mt-3 text-center text-2xl sm:text-4xl font-black uppercase leading-tight">Khi nắm trong tay bộ công cụ video AI,<br><span class="inline-block mt-2 bg-gold text-ink px-3 rounded-lg">5 điều này thay đổi hoàn toàn</span></h2>
+    <div class="mt-10 space-y-4">
+      <div class="card rounded-3xl p-6 grid md:grid-cols-[90px_1fr] gap-4 items-start">
+        <span class="text-5xl font-black text-grad leading-none">01</span>
+        <div>
+          <h3 class="font-black text-lg text-white">KHÔNG BAO GIỜ CẠN Ý TƯỞNG: MỖI SÁNG ĐỀU CÓ SẴN VIDEO ĐỂ ĐĂNG</h3>
+          <ul class="mt-3 grid md:grid-cols-3 gap-3 text-sm text-slate-300 leading-relaxed">
+            <li>• <b class="text-white">10 dạng video viral mẫu</b> và <b class="text-white">tư duy để tự làm bất kỳ dạng video nào</b> – gặp xu hướng mới là làm được ngay.</li>
+            <li>• <b class="text-white">AI gợi ý ý tưởng theo ngách</b> của bạn, đi trước xu hướng thay vì chạy theo.</li>
+            <li>• <b class="text-white">Bộ skill của riêng bạn:</b> tự tạo, chỉnh sửa, nâng cấp skill hợp với ngành và phong cách của mình.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card rounded-3xl p-6 grid md:grid-cols-[90px_1fr] gap-4 items-start">
+        <span class="text-5xl font-black text-grad leading-none">02</span>
+        <div>
+          <h3 class="font-black text-lg text-white">VIDEO ĐÚNG DẠNG VIRAL: ĐĂNG LÊN CÓ NGƯỜI XEM, CÓ NGƯỜI HỎI MUA</h3>
+          <ul class="mt-3 grid md:grid-cols-3 gap-3 text-sm text-slate-300 leading-relaxed">
+            <li>• <b class="text-white">Làm đúng 10 dạng video viral</b> đã được kiểm chứng, thay vì làm theo cảm tính.</li>
+            <li>• <b class="text-white">Được sửa bài 1:1</b> trên Zoom: từng video của bạn được chấm và chỉnh trực tiếp.</li>
+            <li>• <b class="text-white">Biết dạng video nào hợp sản phẩm của mình</b> – video làm ra là để bán hàng.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card rounded-3xl p-6 grid md:grid-cols-[90px_1fr] gap-4 items-start">
+        <span class="text-5xl font-black text-grad leading-none">03</span>
+        <div>
+          <h3 class="font-black text-lg text-white">TIẾT KIỆM 80% THỜI GIAN VÀ CHI PHÍ: AI LÀM THAY CẢ MỘT ĐỘI QUAY DỰNG</h3>
+          <ul class="mt-3 grid md:grid-cols-3 gap-3 text-sm text-slate-300 leading-relaxed">
+            <li>• <b class="text-white">Sản xuất hàng loạt video trong vài phút,</b> thay vì mất trọn một ngày cho một video.</li>
+            <li>• <b class="text-white">Không cần thiết bị, không cần thuê editor</b> 15–20 triệu mỗi tháng.</li>
+            <li>• <b class="text-white">Khách hàng đến tự nhiên</b> từ video, giảm phụ thuộc vào quảng cáo ngày càng đắt.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card rounded-3xl p-6 grid md:grid-cols-[90px_1fr] gap-4 items-start">
+        <span class="text-5xl font-black text-grad leading-none">04</span>
+        <div>
+          <h3 class="font-black text-lg text-white">RA VIDEO ĐỀU MỖI NGÀY: KHÁCH HÀNG NHÌN THẤY BẠN MỖI NGÀY</h3>
+          <ul class="mt-3 grid md:grid-cols-3 gap-3 text-sm text-slate-300 leading-relaxed">
+            <li>• <b class="text-white">Xuất hiện đều đặn trên bảng tin</b> TikTok, Facebook, YouTube của đúng tệp khách hàng.</li>
+            <li>• <b class="text-white">Trở thành cái tên đầu tiên</b> khách nghĩ đến khi cần sản phẩm, dịch vụ trong ngành.</li>
+            <li>• <b class="text-white">Tin nhắn hỏi mua đến liên tục</b> – bạn chọn khách, thay vì đi tìm khách.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card rounded-3xl p-6 grid md:grid-cols-[90px_1fr] gap-4 items-start border-gold/60">
+        <span class="text-5xl font-black text-grad leading-none">05</span>
+        <div>
+          <h3 class="font-black text-lg text-white">TỰ TIN TRONG KỶ NGUYÊN AI: BẠN LÀ NGƯỜI ĐIỀU KHIỂN, KHÔNG CÒN BỊ BỎ LẠI</h3>
+          <ul class="mt-3 grid md:grid-cols-3 gap-3 text-sm text-slate-300 leading-relaxed">
+            <li>• <b class="text-white">Không cần lộ mặt</b> mà vẫn có kênh chuyên nghiệp, nhân vật và giọng đọc do AI tạo.</li>
+            <li>• <b class="text-white">Dùng AI thành thạo như dùng Zalo:</b> gõ chữ, bấm nút, hệ thống tự chạy.</li>
+            <li>• <b class="text-white">Trở thành nhà sáng tạo nội dung thông minh</b> – người ra lệnh, để AI làm việc thay mình.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dải 10 dạng video -->
+  <section class="py-10 reveal">
+    <h2 class="text-center text-xl sm:text-3xl font-black px-4 uppercase leading-tight">10 dạng video viral<br><span class="text-grad">và tư duy để làm bất kỳ dạng video nào</span></h2>
+    <p class="text-center text-sm sm:text-base text-slate-300 mt-3 px-4 max-w-2xl mx-auto">Bạn không học thuộc 10 mẫu – bạn học <b class="text-white">cách các video này viral</b>, để tự áp dụng cho sản phẩm, ngành hàng hay xu hướng mới bất kỳ.</p>
+    <p class="text-center text-sm text-slate-400 mt-2 px-4">👆 Bấm vào từng dạng để xem video minh hoạ do AI làm</p>
+    <div class="marquee mt-8">
+      <div class="marquee-track" id="marquee"></div>
+    </div>
+  </section>
+
+  <!-- ===== 7. XÂY DỰNG GIÁ TRỊ LỚN ===== -->
+  <section class="max-w-5xl mx-auto px-4 py-14 reveal">
+    <h2 class="text-center text-2xl sm:text-4xl font-black">Hãy làm một <span class="text-grad">phép tính nhỏ</span></h2>
+    <div class="mt-10 grid md:grid-cols-3 gap-4">
+      <div class="card rounded-3xl p-6 opacity-90">
+        <p class="text-xs font-black uppercase tracking-widest text-slate-400">Cách 1 · Thuê ngoài</p>
+        <p class="mt-3 text-3xl font-black text-white">15–20 triệu<span class="text-base text-slate-400">/tháng</span></p>
+        <p class="mt-3 text-sm text-slate-300">Thuê editor hoặc agency làm video. Hết tiền là hết video, và bạn vẫn không hiểu vì sao kênh lên hay xuống.</p>
+      </div>
+      <div class="card rounded-3xl p-6 opacity-90">
+        <p class="text-xs font-black uppercase tracking-widest text-slate-400">Cách 2 · Tự mò mẫm</p>
+        <p class="mt-3 text-3xl font-black text-white">6–12 tháng</p>
+        <p class="mt-3 text-sm text-slate-300">Xem video hướng dẫn rời rạc, thử sai liên tục. Thời gian đó, đối thủ đã chiếm trọn khách hàng của bạn.</p>
+      </div>
+      <div class="card glow rounded-3xl p-6 border-gold">
+        <p class="text-xs font-black uppercase tracking-widest text-gold">Cách 3 · Đồng hành 30 ngày</p>
+        <p class="mt-3 text-3xl font-black text-grad">1.499.000đ</p>
+        <p class="mt-3 text-sm text-slate-200">Một lần đầu tư, sở hữu hệ thống dùng mãi mãi. Có người sửa bài trực tiếp đến khi bạn làm được.</p>
+      </div>
+    </div>
+    <div class="mt-6 rounded-3xl border border-gold/40 bg-gold/5 p-6 text-center">
+      <p class="text-base sm:text-lg text-slate-100">💡 <b class="text-gold">Bài toán hoàn vốn:</b> chỉ cần <b>một video lên xu hướng</b> mang về <b>2–3 đơn hàng</b>, bạn đã hoà vốn toàn bộ học phí. Mọi video sau đó là <b class="text-gold">lợi nhuận thuần</b> – và hệ thống thì ở lại với bạn trọn đời.</p>
+    </div>
+  </section>
+
+  <!-- ===== 8. DÀNH CHO AI – KHÔNG DÀNH CHO AI ===== -->
+  <section id="danh-cho-ai" class="max-w-5xl mx-auto px-4 py-14 reveal scroll-mt-16">
+    <h2 class="text-center text-2xl sm:text-4xl font-black">Chương trình này <span class="text-grad">có dành cho bạn?</span></h2>
+    <div class="mt-10 grid md:grid-cols-2 gap-4">
+      <div class="card rounded-3xl p-6 border-emerald-500/40">
+        <h3 class="font-black text-lg text-emerald-400">✅ Dành cho bạn nếu bạn là</h3>
+        <ul class="mt-4 space-y-3 text-sm sm:text-base text-slate-200">
+          <li>• Chủ doanh nghiệp, chủ shop online muốn có kênh video kéo khách tự nhiên, bớt phụ thuộc quảng cáo.</li>
+          <li>• Người làm tiếp thị liên kết (affiliate) TikTok Shop, Shopee, Lazada… muốn ra video hàng loạt để gắn giỏ hàng và nhận hoa hồng mỗi ngày.</li>
+          <li>• Người kinh doanh tự do ở bất kỳ ngành nghề nào: mỹ phẩm, ẩm thực, bất động sản, giáo dục, dịch vụ…</li>
+          <li>• Người bận rộn, không có thời gian quay dựng, muốn tự động hoá để video vẫn ra đều mỗi ngày.</li>
+          <li>• Người ngại lộ mặt, không rành công nghệ nhưng sẵn sàng làm theo hướng dẫn từng bước.</li>
+        </ul>
+      </div>
+      <div class="card rounded-3xl p-6 border-red-500/40">
+        <h3 class="font-black text-lg text-red-400">⛔ Không dành cho bạn nếu bạn</h3>
+        <ul class="mt-4 space-y-3 text-sm sm:text-base text-slate-300">
+          <li>• Lười hành động, chỉ muốn nghe cho biết rồi để đó.</li>
+          <li>• Đang tìm thủ thuật gian lận, mua view, lách luật nền tảng để nổi nhanh trong vài ngày.</li>
+          <li>• Mang tư duy "tôi biết hết rồi" nhưng không chịu làm bài tập và nộp video để được sửa.</li>
+        </ul>
+        <p class="mt-4 text-xs text-slate-400 italic">Chúng tôi chỉ nhận 30 học viên, nên xin dành suất cho người thật sự sẵn sàng làm.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 9. TẠO CẢM XÚC – VIỄN CẢNH TƯƠNG LAI ===== -->
+  <section class="max-w-5xl mx-auto px-4 py-14 reveal">
+    <div class="rounded-3xl overflow-hidden grid md:grid-cols-[1fr_320px] card glow">
+      <div class="p-6 sm:p-10">
+        <p class="text-xs font-bold uppercase tracking-[.25em] text-gold">Hãy nhắm mắt lại vài giây</p>
+        <h2 class="mt-3 text-2xl sm:text-3xl font-black">Một buổi sáng, <span class="text-grad">30 ngày sau</span>…</h2>
+        <div class="mt-5 space-y-4 text-slate-200 leading-relaxed">
+          <p>Chuông báo thức còn chưa kịp reo, điện thoại trên đầu giường đã rung liên tục. Bạn với tay lấy máy, màn hình sáng lên một dải thông báo dài không thấy điểm dừng.</p>
+          <p><i>"Video của bạn đang thịnh hành."</i> Bạn dụi mắt nhìn lại con số lượt xem – nó vẫn đang nhảy. Hàng trăm bình luận: <i>"Shop ơi còn hàng không?", "Ib giá giúp em", "Ship về Đà Nẵng được không chị?"</i></p>
+          <p>Bạn pha một ly cà phê, mở máy tính, bấm chạy hệ thống. Trong lúc bạn trả lời khách, AI đã dựng xong 5 video mới cho tuần tới. Lần đầu tiên sau rất lâu, bạn thấy mình <b class="text-gold">đi trước</b> – chứ không còn chạy theo.</p>
+        </div>
+      </div>
+      <div class="bg-navy p-6 flex flex-col justify-center gap-3" aria-hidden="true">
+        <div class="rounded-2xl bg-white/5 border border-line p-3 text-sm"><b class="text-gold">TikTok</b> · Video của bạn đang thịnh hành 🔥</div>
+        <div class="rounded-2xl bg-white/5 border border-line p-3 text-sm"><b class="text-gold">Zalo</b> · Khách mới: "Chị ơi em muốn đặt 2 cái"</div>
+        <div class="rounded-2xl bg-white/5 border border-line p-3 text-sm"><b class="text-gold">Facebook</b> · 128 bình luận mới trên Reels</div>
+        <div class="rounded-2xl bg-white/5 border border-line p-3 text-sm"><b class="text-gold">Messenger</b> · "Ib giá giúp em với ạ"</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10. KHỐI RÕ RÀNG + LỘ TRÌNH 5 BUỔI ZOOM ===== -->
+  <section id="lo-trinh" class="max-w-5xl mx-auto px-4 py-14 reveal">
+    <h2 class="text-center text-2xl sm:text-4xl font-black">Nói rõ ngay từ đầu: <span class="text-grad">bạn sẽ nhận được gì</span></h2>
+    <div class="mt-10 grid md:grid-cols-2 gap-4">
+      <div class="card rounded-3xl p-6">
+        <h3 class="font-black text-lg text-gold">Chương trình LÀ</h3>
+        <ul class="mt-3 space-y-2 text-sm sm:text-base text-slate-200">
+          <li>✔ Tặng 2 tool AI làm video: tool đa ngành review bán hàng và tool 1 ảnh xây kênh đa nền tảng.</li>
+          <li>✔ Tặng 10 skill video AI viral, hướng dẫn từng bước và tư duy để làm bất kỳ dạng video nào.</li>
+          <li>✔ Hướng dẫn chi tiết tạo skill, dùng skill, nâng cấp skill theo nhu cầu cá nhân hoá của từng người.</li>
+          <li>✔ Quy trình đăng bài tự động lên đa nền tảng.</li>
+          <li>✔ Định hướng loại video nên làm cho kênh bán hàng và thương hiệu cá nhân của bạn.</li>
+          <li>✔ 30 ngày đồng hành, 5 buổi Zoom trực tiếp, có nhóm hỗ trợ riêng, bài tập mỗi ngày và chữa bài cho từng người.</li>
+        </ul>
+      </div>
+      <div class="card rounded-3xl p-6">
+        <h3 class="font-black text-lg text-red-400">Chương trình KHÔNG PHẢI LÀ</h3>
+        <ul class="mt-3 space-y-2 text-sm sm:text-base text-slate-300">
+          <li>✘ Khoá học quay sẵn bán xong rồi bỏ rơi học viên.</li>
+          <li>✘ Khoá học lý thuyết xây kênh: bạn nhận công cụ và làm ra video thật ngay từ buổi đầu.</li>
+          <li>✘ Lời hứa "nổi tiếng sau một đêm" không cần hành động.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="mt-12 text-center text-xl sm:text-2xl font-black">Lộ trình <span class="text-grad">5 buổi Zoom</span> trong 30 ngày</h3>
+    <ol class="mt-8 relative border-l-2 border-gold/40 ml-4 sm:ml-6 space-y-6">
+      <li class="pl-6 sm:pl-8 relative"><span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-cta text-ink font-black flex items-center justify-center">1</span><div class="card rounded-2xl p-5"><p class="text-xs font-bold text-gold uppercase">Buổi 1 · Ngày 1</p><h4 class="font-black text-lg mt-1">Cài công cụ &amp; làm video đầu tiên cho sản phẩm của bạn</h4><p class="text-sm text-slate-300 mt-1">Cài đặt 2 tool, làm video đầu tiên cho chính sản phẩm của bạn, và định hướng nên làm loại video nào cho kênh bán hàng hoặc thương hiệu cá nhân.</p></div></li>
+      <li class="pl-6 sm:pl-8 relative"><span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-cta text-ink font-black flex items-center justify-center">2</span><div class="card rounded-2xl p-5"><p class="text-xs font-bold text-gold uppercase">Buổi 2 · Ngày 5</p><h4 class="font-black text-lg mt-1">Tặng 10 skill video AI viral &amp; hướng dẫn từng bước</h4><p class="text-sm text-slate-300 mt-1">Nhận 10 skill video AI viral và được hướng dẫn từng bước cách làm từng dạng video, kèm tư duy để làm bất kỳ dạng video nào.</p></div></li>
+      <li class="pl-6 sm:pl-8 relative"><span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-cta text-ink font-black flex items-center justify-center">3</span><div class="card rounded-2xl p-5"><p class="text-xs font-bold text-gold uppercase">Buổi 3 · Ngày 12</p><h4 class="font-black text-lg mt-1">Tạo skill, dùng skill &amp; nâng cấp skill</h4><p class="text-sm text-slate-300 mt-1">Hướng dẫn chi tiết cách tạo skill, cách dùng skill và nâng cấp skill theo nhu cầu cá nhân hoá của từng người.</p></div></li>
+      <li class="pl-6 sm:pl-8 relative"><span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-cta text-ink font-black flex items-center justify-center">4</span><div class="card rounded-2xl p-5"><p class="text-xs font-bold text-gold uppercase">Buổi 4 · Ngày 19</p><h4 class="font-black text-lg mt-1">Sản xuất video tự động &amp; đăng bài đa nền tảng</h4><p class="text-sm text-slate-300 mt-1">Dùng 2 tool sản xuất video tự động và thiết lập quy trình đăng bài tự động lên nhiều nền tảng cùng lúc.</p></div></li>
+      <li class="pl-6 sm:pl-8 relative"><span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-cta text-ink font-black flex items-center justify-center">5</span><div class="card rounded-2xl p-5"><p class="text-xs font-bold text-gold uppercase">Buổi 5 · Ngày 28</p><h4 class="font-black text-lg mt-1">Tổng kết, chữa bài từng người &amp; hỏi đáp 1-1</h4><p class="text-sm text-slate-300 mt-1">Tổng kết chương trình, chữa bài cho từng học viên và hỏi đáp riêng 1-1.</p></div></li>
+    </ol>
+    <p class="mt-6 text-center text-sm sm:text-base text-slate-200">📝 Xuyên suốt 30 ngày: <b class="text-gold2">có bài tập mỗi ngày</b> và <b class="text-gold2">chữa bài cho từng người</b>. Lịch Zoom cụ thể được gửi trong nhóm riêng khi bạn tham gia.</p>
+  </section>
+
+  <!-- ===== 11. XỬ LÝ TỪ CHỐI (A.R.E.B) ===== -->
+  <section class="max-w-4xl mx-auto px-4 py-14 reveal">
+    <h2 class="text-center text-2xl sm:text-4xl font-black">Có thể bạn đang <span class="text-grad">băn khoăn</span></h2>
+    <div class="mt-8 space-y-3" id="faq">
+      <details class="card rounded-2xl p-5 group" open>
+        <summary class="cursor-pointer list-none flex justify-between gap-4 font-bold text-base sm:text-lg">"Tôi không rành công nghệ, AI liệu tôi có làm được không?"<span class="text-gold text-2xl leading-none group-open:rotate-45 transition">+</span></summary>
+        <div class="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed space-y-2">
+          <p>Hoàn toàn hiểu, rất nhiều chủ shop từng nói đúng câu này trước khi bắt đầu. Thực tế, toàn bộ hệ thống được thiết kế để bạn chỉ cần biết <b class="text-white">gõ chữ và bấm nút</b>: kịch bản có skill viết sẵn, tool dựng video chạy theo từng bước có hình minh hoạ. Trong 5 buổi Zoom, chúng ta làm cùng nhau trên màn hình – bạn kẹt ở đâu, được gỡ ngay ở đó. Vậy nên, nếu bạn dùng được Zalo và Facebook, bạn làm được chương trình này.</p>
+        </div>
+      </details>
+      <details class="card rounded-2xl p-5 group">
+        <summary class="cursor-pointer list-none flex justify-between gap-4 font-bold text-base sm:text-lg">"Ngành của tôi rất kén nội dung, nghiêm túc – liệu có làm video viral được không?"<span class="text-gold text-2xl leading-none group-open:rotate-45 transition">+</span></summary>
+        <div class="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed space-y-2">
+          <p>Đây là lo lắng rất chính đáng, nhất là với bất động sản, tài chính, giáo dục, y tế. Nhưng "viral" không có nghĩa là nhảy nhót hay giật gân. Người xem ngành nghiêm túc vẫn dừng lại vì <b class="text-white">một câu hỏi đúng nỗi lo</b>, một con số bất ngờ, một câu chuyện thật. Bộ công thức có riêng dạng video chuyên gia, video giải đáp và TVC điện ảnh – phù hợp hình ảnh chỉn chu. Vì thế ngành càng kén, đối thủ càng làm video kém, và cơ hội nổi bật của bạn càng lớn.</p>
+        </div>
+      </details>
+      <details class="card rounded-2xl p-5 group">
+        <summary class="cursor-pointer list-none flex justify-between gap-4 font-bold text-base sm:text-lg">"Tôi bận lắm, không có thời gian quay thì sao?"<span class="text-gold text-2xl leading-none group-open:rotate-45 transition">+</span></summary>
+        <div class="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed space-y-2">
+          <p>Chính vì bạn bận, bạn càng cần chương trình này. Bạn <b class="text-white">không cần quay</b>: AI tạo hình ảnh, giọng đọc và dựng video từ kịch bản. Mỗi tuần chỉ cần một buổi khoảng 60 phút để sản xuất hàng loạt video cho cả tuần, phần đăng bài đã có quy trình tự động lo. Các buổi Zoom đều có bản ghi để xem lại. Nói cách khác, chương trình được làm ra để <b class="text-gold">trả lại thời gian</b> cho bạn, không phải lấy thêm.</p>
+        </div>
+      </details>
+      <details class="card rounded-2xl p-5 group">
+        <summary class="cursor-pointer list-none flex justify-between gap-4 font-bold text-base sm:text-lg">"Nếu học xong tôi thấy không phù hợp thì sao?"<span class="text-gold text-2xl leading-none group-open:rotate-45 transition">+</span></summary>
+        <div class="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p>Bạn có 7 ngày để trải nghiệm. Nếu thấy không hữu ích, chỉ cần nhắn Zalo, bạn được hoàn lại 100% học phí, không cần giải thích lý do.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== 12. LÝ DO NÊN MUA NGAY ===== -->
+  <section class="max-w-5xl mx-auto px-4 py-14 reveal">
+    <h2 class="text-center text-2xl sm:text-4xl font-black">Vì sao nên bắt đầu <span class="text-grad">ngay hôm nay</span>, không phải tháng sau?</h2>
+    <div class="mt-10 grid md:grid-cols-3 gap-4">
+      <div class="card rounded-3xl p-6"><p class="text-xs font-black uppercase tracking-widest text-gold">Logic</p><h3 class="mt-2 font-black text-lg">Thuật toán đổi mỗi ngày</h3><p class="mt-2 text-sm text-slate-300">Video ngắn và công cụ AI thay đổi theo tuần. Ai nắm hệ thống trước sẽ chiếm lĩnh thị phần trong ngách trước khi nó bão hoà.</p></div>
+      <div class="card rounded-3xl p-6"><p class="text-xs font-black uppercase tracking-widest text-gold">Cảm xúc</p><h3 class="mt-2 font-black text-lg">Mỗi ngày chờ là một ngày mất khách</h3><p class="mt-2 text-sm text-slate-300">Khách hàng của bạn đang lướt video ngay lúc này. Nếu không thấy bạn, họ sẽ thấy và mua của đối thủ.</p></div>
+      <div class="card rounded-3xl p-6"><p class="text-xs font-black uppercase tracking-widest text-gold">Kỷ luật</p><h3 class="mt-2 font-black text-lg">30 ngày có người kèm</h3><p class="mt-2 text-sm text-slate-300">Một mình rất dễ bỏ dở. Có lịch Zoom, có bài tập, có người sửa bài – bạn sẽ làm đến nơi đến chốn.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== 13. BẰNG CHỨNG XÁC THỰC ===== -->
+  <section id="phan-hoi" class="max-w-6xl mx-auto px-4 py-14 reveal">
+    <p class="text-center text-xs font-bold uppercase tracking-[.25em] text-gold">Phản hồi thật từ khách hàng</p>
+    <h2 class="mt-3 text-center text-2xl sm:text-4xl font-black uppercase leading-tight">Khách hàng nói gì<br><span class="inline-block mt-2 bg-gold text-ink px-3 rounded-lg">khi được Dinh đồng hành</span></h2>
+    <p class="mt-4 text-center text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">Ảnh chụp tin nhắn thật từ khách đã dùng app AI làm video và được Dinh hỗ trợ trực tiếp. Tên và ảnh đại diện đã được che để giữ riêng tư cho khách.</p>
+    <div class="mt-10 columns-1 sm:columns-2 lg:columns-3 gap-4" id="testimonials"></div>
+    <div class="mt-4 card rounded-3xl p-5 sm:p-6 grid sm:grid-cols-[1fr_auto] gap-5 items-center">
+      <div>
+        <span class="inline-block rounded-full bg-gold/15 border border-gold/40 text-gold2 text-xs font-bold px-3 py-1">Thử nghiệm bằng chính bộ công cụ</span>
+        <p class="mt-3 text-base font-semibold text-white leading-relaxed">Dinh dùng chính các công cụ này làm video cho 2 kênh mới, không quay, không lộ mặt. Sau 5 ngày, hai kênh đạt hơn 2,2 triệu lượt xem.</p>
+        <p class="mt-2 text-xs text-slate-400">Ảnh chụp màn hình thật. Kết quả của mỗi người tuỳ vào sản phẩm và việc thực hành.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-2 sm:w-64">
+        <img src="images/kenh-tiktok.jpg" alt="Kênh TikTok làm bằng bộ công cụ AI" loading="lazy" class="rounded-xl aspect-[9/14] object-cover object-top w-full">
+        <img src="images/kenh-facebook.jpg" alt="Kênh Facebook Reels làm bằng bộ công cụ AI" loading="lazy" class="rounded-xl aspect-[9/14] object-cover object-top w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 14 + 15. VALUE STACK, BÁO GIÁ 2 BƯỚC, QUÀ TẶNG ===== -->
+  <section id="bao-gia" class="max-w-5xl mx-auto px-4 py-14 reveal scroll-mt-16">
+    <h2 class="text-center text-2xl sm:text-4xl font-black uppercase leading-tight">Đăng ký hôm nay – nhận ngay<br><span class="inline-block mt-2 bg-gold text-ink px-3 rounded-lg">bộ quà tặng trị giá 2.388.000đ</span></h2>
+    <p class="mt-3 text-center text-slate-300">Kèm toàn bộ chương trình đồng hành có tổng giá trị hơn <b class="text-gold2">5.387.000đ</b></p>
+
+    <!-- Quà tặng -->
+    <div class="mt-10 grid md:grid-cols-3 gap-4">
+      <div class="relative card glow rounded-3xl p-6">
+        <span class="absolute -top-3 left-6 rounded-full bg-cta text-ink text-xs font-black px-3 py-1">🎁 QUÀ TẶNG 1 · Trị giá 699.000đ</span>
+        <h3 class="mt-2 font-black text-xl">Tool đa ngành review bán hàng</h3>
+        <ul class="mt-3 space-y-1.5 text-sm text-slate-300">
+          <li>• Làm video review bán hàng bằng AI cho mọi ngành hàng.</li>
+          <li>• Không cần quay, không cần lộ mặt.</li>
+          <li>• Được hướng dẫn cài đặt và sử dụng trực tiếp trong buổi Zoom.</li>
+        </ul>
+      </div>
+      <div class="relative card glow rounded-3xl p-6">
+        <span class="absolute -top-3 left-6 rounded-full bg-cta text-ink text-xs font-black px-3 py-1">🎁 QUÀ TẶNG 2 · Trị giá 699.000đ</span>
+        <h3 class="mt-2 font-black text-xl">Tool 1 ảnh xây kênh đa nền tảng</h3>
+        <ul class="mt-3 space-y-1.5 text-sm text-slate-300">
+          <li>• Chỉ từ 1 tấm ảnh, tạo video để xây kênh trên nhiều nền tảng.</li>
+          <li>• Không cần quay, không cần lộ mặt.</li>
+          <li>• Được hướng dẫn cài đặt và sử dụng trực tiếp trong buổi Zoom.</li>
+        </ul>
+      </div>
+      <div class="relative card glow rounded-3xl p-6">
+        <span class="absolute -top-3 left-6 rounded-full bg-cta text-ink text-xs font-black px-3 py-1">🎁 QUÀ TẶNG 3 · Trị giá 990.000đ</span>
+        <h3 class="mt-2 font-black text-xl">10 skill video AI viral</h3>
+        <ul class="mt-3 space-y-1.5 text-sm text-slate-300">
+          <li>• 10 skill cho 10 dạng video viral: gia dụng, đồ ăn, nấu ăn, bất động sản, TVC, thương hiệu cá nhân, mẹ và bé, động vật, thú cưng, drama.</li>
+          <li>• Dùng được ngay cho sản phẩm của bạn.</li>
+          <li>• Được hướng dẫn chỉnh sửa, nâng cấp thành skill riêng của bạn.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bảng cộng dồn -->
+    <div class="mt-8 card rounded-3xl overflow-hidden">
+      <table class="w-full text-sm sm:text-base">
+        <tbody class="divide-y divide-line">
+          <tr><td class="p-4">🎁 Tặng Tool đa ngành review bán hàng</td><td class="p-4 text-right font-bold whitespace-nowrap">699.000đ</td></tr>
+          <tr><td class="p-4">🎁 Tặng Tool 1 ảnh xây kênh đa nền tảng</td><td class="p-4 text-right font-bold whitespace-nowrap">699.000đ</td></tr>
+          <tr><td class="p-4">🎁 Tặng 10 skill video AI viral</td><td class="p-4 text-right font-bold whitespace-nowrap">990.000đ</td></tr>
+          <tr><td class="p-4">✅ Hướng dẫn từng bước các dạng video viral <span class="block text-xs text-slate-400">Và tư duy để làm bất kỳ dạng video nào</span></td><td class="p-4 text-right font-bold whitespace-nowrap">1.000.000đ</td></tr>
+          <tr><td class="p-4">✅ Định hướng video cho kênh bán hàng &amp; thương hiệu cá nhân</td><td class="p-4 text-right font-bold whitespace-nowrap">1.000.000đ</td></tr>
+          <tr><td class="p-4">✅ Hướng dẫn tạo skill, dùng skill, nâng cấp skill cá nhân hoá</td><td class="p-4 text-right font-bold text-gold whitespace-nowrap">Trị giá đặc biệt</td></tr>
+          <tr><td class="p-4">✅ Quy trình đăng bài tự động lên đa nền tảng</td><td class="p-4 text-right font-bold whitespace-nowrap">999.000đ</td></tr>
+          <tr><td class="p-4">⭐ 30 ngày đồng hành, 5 buổi Zoom <span class="block text-xs text-slate-400">Bài tập mỗi ngày, chữa bài từng người, hỏi đáp 1-1</span></td><td class="p-4 text-right font-bold text-gold whitespace-nowrap">Trị giá đặc biệt</td></tr>
+          <tr class="bg-gold/10"><td class="p-4 font-black text-base sm:text-lg">TỔNG GIÁ TRỊ THỰC TẾ</td><td class="p-4 text-right font-black text-lg sm:text-xl text-gold whitespace-nowrap">&gt; 5.387.000đ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Báo giá -->
+    <div class="mt-8 max-w-md mx-auto">
+      <div class="relative card glow rounded-3xl p-7 text-center border-2 border-gold">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-cta text-ink text-xs font-black px-3 py-1">ƯU ĐÃI ĐỢT NÀY · TIẾT KIỆM 50%</span>
+        <p class="mt-2 text-sm text-slate-400">Giá niêm yết <s>2.999.000đ</s></p>
+        <p class="mt-1 text-5xl sm:text-6xl font-black text-grad">1.499.000đ</p>
+        <p class="mt-2 text-sm text-slate-300">Giá ưu đãi cho 30 học viên đầu tiên của đợt này</p>
+        <a href="#dang-ky" class="mt-6 inline-flex w-full justify-center rounded-2xl bg-cta text-ink font-black uppercase px-5 py-4">Giữ suất 1.499.000đ</a>
+        <p class="mt-3 text-xs text-slate-400">🛡️ Hoàn tiền 100% trong 7 ngày nếu không hài lòng</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 16. GIỚI HẠN & KHAN HIẾM ===== -->
+  <section class="max-w-4xl mx-auto px-4 py-10 reveal">
+    <div class="rounded-3xl border-2 border-flame/60 bg-flame/10 p-6 sm:p-8 text-center">
+      <h2 class="text-xl sm:text-3xl font-black">⚠️ Chỉ nhận đúng <span class="text-grad">30 học viên</span> cho đợt Zoom này</h2>
+      <p class="mt-3 text-slate-200 max-w-2xl mx-auto">Mỗi video của bạn đều được sửa trực tiếp 1:1. Để giữ chất lượng đó, chúng tôi không thể nhận thêm. Khi đủ 30 suất, giá trở về 2.999.000đ.</p>
+      <div class="mt-6 hidden justify-center gap-2 sm:gap-3" id="cd-boxes" data-co-han>
+        <div class="card rounded-2xl w-16 sm:w-20 py-3"><p class="text-2xl sm:text-3xl font-black text-grad tabular-nums" data-cd="d">00</p><p class="text-[10px] uppercase text-slate-400">Ngày</p></div>
+        <div class="card rounded-2xl w-16 sm:w-20 py-3"><p class="text-2xl sm:text-3xl font-black text-grad tabular-nums" data-cd="h">00</p><p class="text-[10px] uppercase text-slate-400">Giờ</p></div>
+        <div class="card rounded-2xl w-16 sm:w-20 py-3"><p class="text-2xl sm:text-3xl font-black text-grad tabular-nums" data-cd="m">00</p><p class="text-[10px] uppercase text-slate-400">Phút</p></div>
+        <div class="card rounded-2xl w-16 sm:w-20 py-3"><p class="text-2xl sm:text-3xl font-black text-grad tabular-nums" data-cd="s">00</p><p class="text-[10px] uppercase text-slate-400">Giây</p></div>
+      </div>
+      <p class="mt-3 text-xs text-slate-400 hidden" data-co-han>Hạn ưu đãi: <span id="han-uu-dai"></span></p>
+    </div>
+  </section>
+
+  <!-- ===== 17. BẢO ĐẢM & ĐẢO NGƯỢC RỦI RO ===== -->
+  <section class="max-w-4xl mx-auto px-4 py-10 reveal">
+    <div class="card glow rounded-3xl p-6 sm:p-10 flex flex-col sm:flex-row gap-6 items-center text-center sm:text-left">
+      <div class="shrink-0 w-28 h-28 rounded-full border-4 border-gold flex flex-col items-center justify-center bg-gold/10">
+        <span class="text-3xl font-black text-gold leading-none">100%</span><span class="text-[10px] font-bold uppercase text-gold2">Hoàn tiền</span>
+      </div>
+      <div>
+        <h2 class="text-xl sm:text-2xl font-black">Cam kết hoàn tiền 100% trong 7 ngày – <span class="text-grad">rủi ro của bạn bằng 0</span></h2>
+        <p class="mt-3 text-slate-300">Tham gia buổi Zoom đầu tiên, nhận tài liệu, dùng thử tool. Nếu trong 7 ngày bạn thấy chương trình không hữu ích, chỉ cần nhắn một tin Zalo – bạn nhận lại toàn bộ học phí, <b class="text-white">không hỏi thêm lý do</b>. Người chịu rủi ro là chúng tôi, không phải bạn.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 18. FORM ĐĂNG KÝ ===== -->
+  <section id="dang-ky" class="max-w-3xl mx-auto px-4 py-14 scroll-mt-16">
+    <div class="card glow rounded-3xl p-6 sm:p-10 border-2 border-gold/70">
+      <div id="buoc-1">
+        <h2 class="text-center text-2xl sm:text-3xl font-black">Đăng ký <span class="text-grad">giữ suất</span> ngay</h2>
+        <p class="mt-2 text-center text-sm text-slate-300">Chỉ mất 20 giây. Điền xong, bạn nhận ngay mã QR thanh toán đúng số tiền.</p>
+        <form id="form-dk" class="mt-6 space-y-4" novalidate>
+          <div>
+            <label for="ho-ten" class="block text-sm font-bold mb-1.5">Họ và tên *</label>
+            <input id="ho-ten" name="hoTen" type="text" maxlength="100" autocomplete="name" placeholder="Ví dụ: Nguyễn Thị Hoa" class="w-full rounded-xl bg-ink/70 border border-line px-4 py-3.5 focus:outline-none focus:border-gold">
+          </div>
+          <div>
+            <label for="sdt" class="block text-sm font-bold mb-1.5">Số điện thoại / Zalo *</label>
+            <input id="sdt" name="sdt" type="tel" inputmode="numeric" maxlength="15" autocomplete="tel" placeholder="Ví dụ: 0912345678" class="w-full rounded-xl bg-ink/70 border border-line px-4 py-3.5 focus:outline-none focus:border-gold">
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="nganh" class="block text-sm font-bold mb-1.5">Bạn kinh doanh lĩnh vực gì?</label>
+              <select id="nganh" name="nganh" class="w-full rounded-xl bg-ink/70 border border-line px-4 py-3.5 focus:outline-none focus:border-gold">
+                <option value="">– Chọn lĩnh vực –</option>
+                <option>Mỹ phẩm, làm đẹp, spa</option><option>Thời trang, phụ kiện</option><option>Ẩm thực, đồ ăn, nhà hàng</option>
+                <option>Gia dụng, đồ dùng</option><option>Bất động sản</option><option>Mẹ và bé</option><option>Giáo dục, khoá học</option>
+                <option>Tài chính, bảo hiểm</option><option>Dịch vụ khác</option><option>Tiếp thị liên kết (affiliate)</option><option>Xây kênh kiếm tiền từ nội dung</option><option>Chưa kinh doanh</option>
+              </select>
+            </div>
+            <div>
+              <label for="nhu-cau" class="block text-sm font-bold mb-1.5">Khó khăn lớn nhất của bạn?</label>
+              <input id="nhu-cau" name="nhuCau" type="text" maxlength="300" placeholder="Ví dụ: video ít view, không có thời gian…" class="w-full rounded-xl bg-ink/70 border border-line px-4 py-3.5 focus:outline-none focus:border-gold">
+            </div>
+          </div>
+          <input type="hidden" name="goi" value="moi">
+          <p id="loi" class="hidden text-sm text-red-400 font-semibold"></p>
+          <button type="submit" class="cta-pulse w-full rounded-2xl bg-cta text-ink font-black uppercase px-5 py-4 text-sm sm:text-base leading-snug">⚡ Tôi muốn tự làm video bán hàng bằng AI ngay</button>
+          <p class="text-center text-xs text-slate-400">🔒 Thông tin chỉ dùng để liên hệ hỗ trợ bạn (<a href="chinh-sach.html#bao-mat" class="underline">bảo mật</a>) · 🛡️ <a href="chinh-sach.html#hoan-tien" class="underline">Hoàn tiền 100% trong 7 ngày</a></p>
+        </form>
+      </div>
+
+      <!-- Bước 2: thanh toán (hiện sau khi gửi form) -->
+      <div id="buoc-2" class="hidden text-center">
+        <p class="text-xs font-bold uppercase tracking-widest text-gold">Bước 2/2 · Thanh toán giữ suất</p>
+        <h2 class="mt-2 text-2xl font-black">Cảm ơn <span id="tt-ten" class="text-grad"></span>!</h2>
+        <p class="mt-2 text-sm text-slate-300">Quét mã bằng ứng dụng ngân hàng bất kỳ. Số tiền và nội dung đã điền sẵn.</p>
+        <img id="qr" alt="Mã QR chuyển khoản" class="mt-5 mx-auto w-64 sm:w-72 rounded-2xl bg-white p-2">
+        <div class="mt-5 text-left max-w-sm mx-auto rounded-2xl border border-line bg-ink/60 p-4 text-sm space-y-1.5">
+          <p>Ngân hàng: <b id="tt-bank"></b></p>
+          <p>Số tài khoản: <b id="tt-stk"></b></p>
+          <p>Chủ tài khoản: <b id="tt-chu"></b></p>
+          <p>Số tiền: <b id="tt-tien" class="text-gold"></b></p>
+          <p>Nội dung: <b id="tt-nd" class="text-gold"></b></p>
+        </div>
+        <a id="nut-zalo" target="_blank" rel="noopener" class="mt-6 inline-flex w-full max-w-sm justify-center rounded-2xl bg-cta text-ink font-black uppercase px-5 py-4">Đã chuyển khoản – Gửi ảnh qua Zalo</a>
+        <p class="mt-3 text-xs text-slate-400">Sau khi nhận ảnh chuyển khoản, chúng tôi thêm bạn vào nhóm học riêng. Lịch Zoom cụ thể được gửi trong nhóm.</p>
+        <button id="quay-lai" type="button" class="mt-4 text-xs underline text-slate-400">Sửa lại thông tin</button>
+      </div>
+    </div>
+    <p class="mt-6 text-center text-sm text-slate-300">Cần hỏi thêm? Zalo / Hotline: <a class="font-bold text-gold" href="https://zalo.me/0915244329" target="_blank" rel="noopener">0915 244 329</a></p>
+  </section>
+
+  <footer class="border-t border-line py-8 pb-28 sm:pb-8 text-center text-xs text-slate-500 px-4">
+    <p>© <span id="nam"></span> Phạm Dinh AI · Chương trình Đồng Hành 30 Ngày – Làm Video Bán Hàng Bằng AI</p>
+    <p class="mt-2"><a href="chinh-sach.html#hoan-tien" class="underline hover:text-gold">Chính sách hoàn tiền</a> · <a href="chinh-sach.html#bao-mat" class="underline hover:text-gold">Bảo mật thông tin</a> · <a href="chinh-sach.html#lien-he" class="underline hover:text-gold">Liên hệ</a> · Zalo 0915 244 329</p>
+  </footer>
+</main>
+
+<!-- Cửa sổ xem video minh hoạ -->
+<div id="vd-modal" class="hidden fixed inset-0 z-[80] bg-black/80 backdrop-blur-sm items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="vd-ten">
+  <div class="card rounded-3xl w-full max-w-4xl max-h-full overflow-y-auto grid md:grid-cols-[minmax(0,320px)_1fr]">
+    <div class="bg-black aspect-[9/16] md:aspect-auto md:min-h-[560px] relative" id="vd-khung"></div>
+    <div class="p-5 sm:p-7 relative">
+      <button id="vd-dong" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-lg" aria-label="Đóng">✕</button>
+      <p class="text-xs font-bold uppercase tracking-widest text-gold" id="vd-nhom"></p>
+      <h3 class="mt-1 text-2xl font-black pr-10" id="vd-ten"></h3>
+      <p class="mt-3 text-slate-300 leading-relaxed" id="vd-gioi-thieu"></p>
+      <p class="mt-5 text-sm font-black text-white">Bạn sẽ học được:</p>
+      <ul class="mt-2 space-y-2 text-sm text-slate-200" id="vd-hoc"></ul>
+      <a href="#dang-ky" id="vd-cta" class="mt-6 inline-flex w-full justify-center rounded-2xl bg-cta text-ink font-black uppercase px-5 py-4 text-sm text-center">⚡ Tôi muốn tự làm được video như thế này</a>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky CTA trên điện thoại -->
+<div id="sticky-cta" class="sm:hidden fixed bottom-0 inset-x-0 z-50 p-3 bg-ink/95 backdrop-blur border-t border-line transition-transform">
+  <a href="#dang-ky" class="flex items-center justify-between gap-3 rounded-2xl bg-cta text-ink px-4 py-3">
+    <span class="leading-tight min-w-0"><span class="block text-[11px] font-bold opacity-80"><span data-co-han class="hidden">Còn <span class="countdown-short"></span></span><span data-khong-han>Chỉ nhận 30 học viên</span></span><b class="text-sm">Tặng quà trị giá 2.388.000đ</b></span>
+    <span class="shrink-0 whitespace-nowrap font-black uppercase text-sm">Giữ suất →</span>
+  </a>
+</div>
+
+<script>
+/* =========================================================
+   CẤU HÌNH – CHỈ CẦN SỬA Ở ĐÂY
+   ========================================================= */
+const CONFIG = {
+  // Hạn ưu đãi 1.499.000đ (năm-tháng-ngàyTgiờ:phút:giây, giờ Việt Nam)
+  // Để trống '' = không hiện đồng hồ đếm ngược. Khi chốt ngày đóng đợt, điền dạng '2026-11-15T23:59:59+07:00'
+  hanUuDai: '',
+
+  // Tài khoản nhận tiền (lấy từ trang cũ)
+  nganHang: { ma: 'MB', ten: 'MB Bank', stk: '0915244329', chu: 'PHAM THI DINH' },
+  zalo: '0915244329',
+  gia: { moi: 1499000 },
+  maNoiDung: 'DONGHANH30',
+
+  // Kết nối CRM (Supabase) – xem crm/HUONG-DAN-CRM.md. Để trống thì bỏ qua, trang vẫn chạy bình thường.
+  supabaseUrl: 'https://kgljgeqgfmfmyujbkvrf.supabase.co',   // ví dụ: https://abcdxyz.supabase.co
+  supabaseKey: 'sb_publishable_4wT3R02-9EEl1ikTIC-W7g_oM2RDReX',   // Publishable key (sb_publishable_...) hoặc anon key
+
+  // true = viền vàng nét đứt quanh các chỗ còn cần điền số liệu thật.
+  // Đổi thành false sau khi đã thay hết.
+  hienChoCanDien: true,
+
+  // Phản hồi khách hàng THẬT: ảnh chụp tin nhắn trong thư mục images/ + câu trích nguyên văn từ ảnh.
+  // Danh sách trống thì phần "Phản hồi" tự ẩn.
+  phanHoi: [
+    { nhan: 'Dễ dùng', loi: 'Cái của b tạo video đồ ăn OK lắm. Mới làm quen thôi nhưng thấy dễ', anh: 'phan-hoi-1.jpg' },
+    { nhan: 'Hết cạn ý tưởng', loi: 'Quá nhàn luôn, app đưa ra 10 ý tưởng tha hồ chọn, mà toàn ý tưởng chất lượng.', anh: 'phan-hoi-5.jpg' },
+    { nhan: 'Hỗ trợ nhiệt tình', loi: 'Bà là nhiệt tình nhất trong những người tôi mua sản phẩm. Support liên tục trên nhóm', anh: 'phan-hoi-2.jpg' },
+    { nhan: 'Đồng hành tận tâm', loi: 'Có giỏi cách mấy mà k có ng hỗ trợ cũng mệt lắm á c. Gặp c xem như e có quý nhân', anh: 'phan-hoi-3.jpg' },
+    { nhan: 'Chất lượng video', loi: 'Nó ngon đó c, voice cũng đồng bộ hơn', anh: 'phan-hoi-6.jpg' },
+    { nhan: 'Đáng đồng tiền', loi: 'Ở đời không có cái gì "Ngon, bổ, rẻ" mà e cảm nhận thấy sản phẩm của chị đạt được tiêu chí này á.', anh: 'phan-hoi-4.jpg' },
+  ],
+};
+
+// [ảnh, tên, mô tả ngắn, nhóm, giới thiệu, bạn sẽ học, link video Google Drive / YouTube / TikTok]
+const DANG_VIDEO = [
+  ['v-giadung.jpg', 'Đồ gia dụng', 'Review sản phẩm chốt đơn liên tục', 'Bán hàng', 'Biến từng món đồ gia dụng thành video review hấp dẫn, khiến người xem muốn mua ngay mà không cần quay thật.', ['Kịch bản review 30 giây chuẩn chốt đơn', 'Dựng cảnh bếp, phòng khách bằng AI', 'Gắn giỏ hàng TikTok Shop / Shopee'], 'https://drive.google.com/file/d/1YhsxJwfUw9ImrDi0_BSxXFVUm13mS-aI/view'],
+  ['v-doan.jpg', 'Đồ ăn', 'Món ăn ngon mắt, kích thích vị giác', 'Bán hàng', 'Làm video đồ ăn bốc khói, cận cảnh đẹp như quảng cáo để bán online hoặc kéo khách về quán.', ['Prompt tạo cảnh món ăn cận cảnh', 'Hiệu ứng khói, nước sốt chuyển động', 'Công thức hook 3 giây đầu'], 'https://drive.google.com/file/d/1xzQFxywAiJE_SuQ_tfHPzC2ZJGLyE9R4/view'],
+  ['v-nauan.jpg', 'Hướng dẫn nấu ăn', 'Công thức từng bước, dễ lên xu hướng', 'Bán hàng', 'Tạo series video dạy nấu ăn từng bước, xây kênh và gắn link bán nguyên liệu, dụng cụ bếp.', ['Chia kịch bản công thức theo bước', 'Giọng đọc AI tự nhiên', 'Gắn tiếp thị liên kết dụng cụ bếp'], 'https://drive.google.com/file/d/1xy3uKP787iJq316nwDkJHPDu6_wC2w9J/view'],
+  ['v-batdongsan.jpg', 'Bất động sản', 'Tour nhà, dự án sang trọng', 'Bán hàng', 'Dựng video giới thiệu căn hộ, dự án như flycam – không cần đội quay, vẫn sang trọng thu hút khách.', ['Video tour căn hộ từ ảnh tĩnh', 'Chuyển động camera điện ảnh', 'Kịch bản thu thông tin khách hàng'], 'https://drive.google.com/file/d/1x0qRK4nMja9-sZeXBKsr1FhUucZhSwfR/view'],
+  ['v-tvc.jpg', 'TVC quảng cáo', 'Phong cách điện ảnh chỉ với AI', 'Bán hàng', 'Làm TVC quảng cáo phong cách điện ảnh cho thương hiệu, nhận job làm video giá cao.', ['Storyboard TVC chuyên nghiệp', 'Giữ nhân vật đồng nhất qua các cảnh', 'Âm nhạc, chỉnh màu điện ảnh'], 'https://drive.google.com/file/d/1gj7LVLE5fhWNmbsgL4hiMjZIGYklUeai/view'],
+  ['v-thuonghieu.jpg', 'Thương hiệu cá nhân', 'Xây uy tín không cần lên hình', 'Xây kênh', 'Xây thương hiệu cá nhân bằng avatar AI của chính bạn – ra video mỗi ngày không cần lên hình.', ['Tạo avatar AI giống bạn', 'Kịch bản chia sẻ giá trị', 'Lịch đăng bài xây kênh mỗi ngày'], 'https://drive.google.com/file/d/1ie6NhAlZR2cO0nRqunx1gDovAeURsNen/view'],
+  ['v-mebe.jpg', 'Mẹ và bé', 'Ấm áp, thu hút cộng đồng các mẹ', 'Xây kênh', 'Làm kênh mẹ và bé với nội dung ấm áp, dễ viral, bán sản phẩm cho mẹ và bé.', ['Ý tưởng video mẹ bé dễ viral', 'Tạo nhân vật em bé đáng yêu', 'Kiếm tiền từ tiếp thị liên kết mẹ bé'], 'https://drive.google.com/file/d/1VY0yv9ITcw7AZ3Gdj1uvv2T164WvmHwg/view'],
+  ['v-dongvat.jpg', 'Thế giới động vật', 'Phim tài liệu hoang dã hùng vĩ', 'Xây kênh', 'Xây kênh thế giới động vật phong cách tài liệu – kiếm tiền từ lượt xem YouTube, TikTok, Facebook.', ['Cảnh hoang dã chân thực', 'Lời dẫn tài liệu hấp dẫn', 'Tối ưu kênh để bật kiếm tiền'], 'https://drive.google.com/file/d/1ixWXLM3LvexvqkqUWxJsh4TY5TeMRM4M/view'],
+  ['v-thucung.jpg', 'Thú cưng', 'Chó mèo hài hước, dễ triệu view', 'Xây kênh', 'Làm video thú cưng dễ thương, hài hước – thể loại luôn được yêu thích và dễ lên xu hướng.', ['Tình huống hài hước cho thú cưng', 'Lồng tiếng, biểu cảm vui nhộn', 'Bán đồ thú cưng qua video'], 'https://drive.google.com/file/d/1CeffGmdQjp1aUc3N0KfZCxGkR4WZkzT1/view'],
+  ['v-drama.jpg', 'Phim ngắn drama', 'Cuốn hút, giữ chân đến tập cuối', 'Xây kênh', 'Sản xuất phim ngắn drama nhiều tập bằng AI – nội dung gây nghiện, giữ chân người xem đến tập cuối.', ['Viết kịch bản drama nhiều tập', 'Nhân vật đồng nhất xuyên suốt', 'Cắt dựng tạo cao trào'], ''],
+];
+
+window.CRM = { url: CONFIG.supabaseUrl.replace(/\/$/, ''), key: CONFIG.supabaseKey };
+
+// Nhận biết khách đến từ đâu (ghi nhớ nguồn đầu tiên)
+window.NGUON_KHACH = (() => {
+  try { const cu = localStorage.getItem('nguon-khach'); if (cu) return cu; } catch (e) {}
+  const p = new URLSearchParams(location.search), ref = document.referrer.toLowerCase();
+  const tenNguon = { facebook: 'Facebook', fb: 'Facebook', ig: 'Instagram', instagram: 'Instagram', tiktok: 'TikTok', zalo: 'Zalo', google: 'Google', youtube: 'YouTube' };
+  let n = '';
+  const utm = (p.get('utm_source') || '').toLowerCase();
+  if (utm) n = tenNguon[utm] || p.get('utm_source');
+  else if (p.has('fbclid')) n = 'Facebook';
+  else if (p.has('ttclid')) n = 'TikTok';
+  else if (p.has('gclid')) n = 'Google';
+  else if (ref && !ref.includes(location.hostname)) {
+    const k = ['facebook', 'fb.', 'instagram', 'tiktok', 'zalo', 'google', 'youtube'].find(x => ref.includes(x));
+    n = k ? tenNguon[k.replace('.', '')] : (new URL(document.referrer).hostname.replace(/^www\./, ''));
+  }
+  n = n || 'Trực tiếp';
+  try { localStorage.setItem('nguon-khach', n); } catch (e) {}
+  return n;
+})();
+const vnd = n => n.toLocaleString('vi-VN') + 'đ';
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const laChoTrong = s => /^\[.*\]$/.test(String(s).trim());
+const o = (s, cls = '') => laChoTrong(s) ? `<span class="can-dien ${cls}">${esc(s)}</span>` : `<span class="${cls}">${esc(s)}</span>`;
+
+if (!CONFIG.hienChoCanDien) document.body.classList.add('no-draft');
+document.getElementById('nam').textContent = new Date().getFullYear();
+
+// Dải 10 dạng video
+document.getElementById('marquee').innerHTML = [...DANG_VIDEO, ...DANG_VIDEO].map(([img, ten, mo, , , , link], i) => `
+  <button type="button" data-vd="${i % DANG_VIDEO.length}" ${i >= DANG_VIDEO.length ? 'tabindex="-1" aria-hidden="true"' : ''} class="group mr-4 w-48 sm:w-56 shrink-0 card rounded-2xl overflow-hidden text-left hover:border-gold transition">
+    <div class="relative overflow-hidden">
+      <img src="images/${img}" alt="Video ${ten} làm bằng AI" loading="lazy" class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition duration-500">
+      <span class="absolute inset-0 flex items-center justify-center"><span class="w-14 h-14 rounded-full bg-black/55 border-2 border-white/80 flex items-center justify-center text-white text-xl pl-1 group-hover:bg-flame group-hover:border-flame transition">▶</span></span>
+      ${link ? '' : '<span class="absolute top-2 right-2 rounded-full bg-black/70 px-2 py-0.5 text-[10px] font-bold">Sắp có video</span>'}
+    </div>
+    <div class="p-3"><p class="font-black">${ten}</p><p class="text-xs text-slate-400 mt-0.5">${mo}</p></div>
+  </button>`).join('');
+
+// Bấm vào dạng video -> mở cửa sổ xem video minh hoạ
+const nhung = link => {
+  let m;
+  if ((m = link.match(/drive\.google\.com\/file\/d\/([^/?#]+)/))) return `https://drive.google.com/file/d/${m[1]}/preview`;
+  if ((m = link.match(/(?:youtu\.be\/|v=|shorts\/)([\w-]{11})/))) return `https://www.youtube.com/embed/${m[1]}`;
+  if ((m = link.match(/tiktok\.com\/.*video\/(\d+)/))) return `https://www.tiktok.com/embed/v2/${m[1]}`;
+  return '';
+};
+const modal = document.getElementById('vd-modal'), marquee = document.querySelector('.marquee');
+function moVideo(i) {
+  const [img, ten, , nhom, gioiThieu, hoc, link] = DANG_VIDEO[i];
+  const src = link && nhung(link);
+  document.getElementById('vd-khung').innerHTML = src
+    ? `<iframe src="${src}" title="Video minh hoạ ${esc(ten)}" class="absolute inset-0 w-full h-full" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`
+    : `<img src="images/${img}" alt="" class="absolute inset-0 w-full h-full object-cover opacity-60"><span class="absolute inset-0 flex items-center justify-center text-center p-6 font-bold">🎬 Video minh hoạ đang được cập nhật</span>`;
+  document.getElementById('vd-nhom').textContent = 'Dạng video ' + nhom.toLowerCase();
+  document.getElementById('vd-ten').textContent = ten;
+  document.getElementById('vd-gioi-thieu').textContent = gioiThieu;
+  document.getElementById('vd-hoc').innerHTML = hoc.map(h => `<li class="flex gap-2"><span class="text-gold">✔</span>${esc(h)}</li>`).join('');
+  modal.classList.remove('hidden'); modal.classList.add('flex');
+  marquee.classList.add('dung'); document.body.style.overflow = 'hidden';
+}
+function dongVideo() {
+  modal.classList.add('hidden'); modal.classList.remove('flex');
+  document.getElementById('vd-khung').innerHTML = '';
+  marquee.classList.remove('dung'); document.body.style.overflow = '';
+}
+document.getElementById('marquee').addEventListener('click', e => { const b = e.target.closest('[data-vd]'); if (b) moVideo(+b.dataset.vd); });
+document.getElementById('video-mau').addEventListener('click', e => { const b = e.target.closest('[data-vd]'); if (b) moVideo(+b.dataset.vd); });
+document.getElementById('vd-dong').onclick = dongVideo;
+document.getElementById('vd-cta').onclick = dongVideo;
+modal.addEventListener('click', e => { if (e.target === modal) dongVideo(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) dongVideo(); });
+// Trên điện thoại: chạm vào dải video thì tạm dừng cho dễ bấm
+marquee.addEventListener('touchstart', () => marquee.classList.add('dung'), { passive: true });
+marquee.addEventListener('touchend', () => setTimeout(() => { if (modal.classList.contains('hidden')) marquee.classList.remove('dung'); }, 1500));
+
+// Phản hồi khách hàng (ảnh chụp tin nhắn thật)
+if (!CONFIG.phanHoi.length) document.getElementById('phan-hoi').remove();
+else document.getElementById('testimonials').innerHTML = CONFIG.phanHoi.map(p => `
+  <figure class="card rounded-3xl overflow-hidden mb-4 break-inside-avoid">
+    <div class="p-5">
+      <span class="inline-block rounded-full bg-gold/15 border border-gold/40 text-gold2 text-xs font-bold px-3 py-1">${esc(p.nhan)}</span>
+      <blockquote class="mt-3 text-base font-semibold text-white leading-relaxed">“${esc(p.loi)}”</blockquote>
+      <p class="mt-2 text-gold text-sm">★★★★★</p>
+    </div>
+    <img src="images/${esc(p.anh)}" alt="Ảnh chụp tin nhắn của khách: ${esc(p.loi)}" loading="lazy" class="w-full border-t border-line">
+  </figure>`).join('');
+
+// Đếm ngược tới hạn cố định (để trống hanUuDai thì ẩn hết phần đếm ngược)
+const han = CONFIG.hanUuDai ? new Date(CONFIG.hanUuDai).getTime() : NaN;
+if (han > Date.now()) {
+  document.querySelectorAll('[data-co-han]').forEach(el => { el.classList.remove('hidden'); if (el.id === 'cd-boxes' || el.tagName === 'SPAN') el.classList.add(el.id === 'cd-boxes' ? 'flex' : 'inline-flex'); });
+  document.querySelectorAll('[data-khong-han]').forEach(el => el.classList.add('hidden'));
+  document.getElementById('han-uu-dai').textContent = new Date(han).toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' });
+  const p2 = n => String(n).padStart(2, '0');
+  const demNguoc = () => {
+    const con = Math.max(0, han - Date.now());
+    const d = Math.floor(con / 864e5), h = Math.floor(con / 36e5) % 24, m = Math.floor(con / 6e4) % 60, s = Math.floor(con / 1e3) % 60;
+    document.querySelectorAll('.countdown').forEach(el => el.textContent = `${p2(d)} ngày ${p2(h)}:${p2(m)}:${p2(s)}`);
+    document.querySelectorAll('.countdown-short').forEach(el => el.textContent = (d ? `${d} ngày ` : '') + `${p2(h)}:${p2(m)}:${p2(s)}`);
+    const map = { d, h, m, s };
+    document.querySelectorAll('[data-cd]').forEach(el => el.textContent = p2(map[el.dataset.cd]));
+  };
+  demNguoc(); setInterval(demNguoc, 1000);
+}
+
+// Nút chọn gói ở bảng giá -> chọn sẵn trong form
+document.querySelectorAll('.chon-goi').forEach(a => a.addEventListener('click', () => {
+  document.querySelector(`input[name="goi"][value="${a.dataset.goi}"]`).checked = true;
+}));
+
+// Form đăng ký -> hiện QR thanh toán
+const form = document.getElementById('form-dk');
+const loi = document.getElementById('loi');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const hoTen = form.hoTen.value.trim();
+  const sdt = form.sdt.value.replace(/[\s.\-]/g, '');
+  const goi = form.goi.value;
+  if (hoTen.length < 2) return baoLoi('Vui lòng nhập họ và tên của bạn.', form.hoTen);
+  if (!/^(0|\+?84)\d{9}$/.test(sdt)) return baoLoi('Số điện thoại / Zalo chưa đúng (ví dụ: 0912345678).', form.sdt);
+  loi.classList.add('hidden');
+
+  const tien = CONFIG.gia[goi];
+  const tenGoi = 'Học viên mới';
+  const noiDung = `${sdt} ${CONFIG.maNoiDung}`;
+  const b = CONFIG.nganHang;
+
+  if (window.CRM.url && window.CRM.key) {
+    let phien = null; try { phien = sessionStorage.getItem('tl-phien'); } catch (e) {}
+    fetch(`${window.CRM.url}/rest/v1/rpc/ghi_khach`, {
+      method: 'POST', headers: { apikey: window.CRM.key, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ p_ho_ten: hoTen, p_sdt: sdt, p_nganh: form.nganh.value, p_nhu_cau: form.nhuCau.value.trim(),
+        p_goi: 'Học viên mới (1.499k)', p_so_tien: tien, p_nguon: window.NGUON_KHACH, p_kenh: 'Form', p_phien: phien }),
+    }).catch(() => {});
+  }
+
+  document.getElementById('qr').src = `https://img.vietqr.io/image/${b.ma}-${b.stk}-compact2.png?amount=${tien}&addInfo=${encodeURIComponent(noiDung)}&accountName=${encodeURIComponent(b.chu)}`;
+  document.getElementById('tt-ten').textContent = hoTen;
+  document.getElementById('tt-bank').textContent = b.ten;
+  document.getElementById('tt-stk').textContent = b.stk;
+  document.getElementById('tt-chu').textContent = b.chu;
+  document.getElementById('tt-tien').textContent = `${vnd(tien)} (${tenGoi})`;
+  document.getElementById('tt-nd').textContent = noiDung;
+  document.getElementById('nut-zalo').href = `https://zalo.me/${CONFIG.zalo}`;
+  document.getElementById('buoc-1').classList.add('hidden');
+  document.getElementById('buoc-2').classList.remove('hidden');
+  document.getElementById('dang-ky').scrollIntoView({ behavior: 'smooth' });
+});
+function baoLoi(msg, el) { loi.textContent = msg; loi.classList.remove('hidden'); el.focus(); }
+document.getElementById('quay-lai').addEventListener('click', () => {
+  document.getElementById('buoc-2').classList.add('hidden');
+  document.getElementById('buoc-1').classList.remove('hidden');
+});
+
+// Ẩn sticky CTA khi đang ở form đăng ký
+const sticky = document.getElementById('sticky-cta');
+new IntersectionObserver(([en]) => { sticky.style.transform = en.isIntersecting ? 'translateY(110%)' : ''; }, { threshold: 0.15 })
+  .observe(document.getElementById('dang-ky'));
+
+// Hiệu ứng hiện dần khi cuộn
+const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+<script src="tro-ly.js?v=14"></script>
+</body>
+</html>
