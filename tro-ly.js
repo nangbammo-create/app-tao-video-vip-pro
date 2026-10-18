@@ -101,13 +101,13 @@
   /* ---------- GIAO DIỆN ---------- */
   const css = `
   #tl-nut{position:fixed;right:16px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;border:2px solid #f5b04c;padding:0;cursor:pointer;background:#0e2a1b;box-shadow:0 10px 30px -6px rgba(234,88,12,.6)}
-  #tl-nut img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+  #tl-nut img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:top}
   #tl-nut .tl-cham{position:absolute;top:2px;right:2px;width:14px;height:14px;border-radius:50%;background:#22c55e;border:2px solid #0e2a1b}
   #tl-moi{position:fixed;right:16px;bottom:92px;z-index:60;max-width:250px;background:#fff;color:#111;border-radius:16px 16px 4px 16px;padding:10px 14px;font-size:14px;line-height:1.4;box-shadow:0 10px 30px rgba(0,0,0,.35);cursor:pointer;display:none}
   #tl-khung{position:fixed;right:16px;bottom:20px;z-index:70;width:370px;max-width:calc(100vw - 32px);height:560px;max-height:calc(100vh - 100px);display:none;flex-direction:column;background:#0e2a1b;border:1px solid #1f4d2e;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px -10px rgba(0,0,0,.7);font-family:inherit;color:#f2f7ef}
   #tl-khung.mo{display:flex}
   .tl-dau{display:flex;align-items:center;gap:10px;padding:12px 14px;background:linear-gradient(90deg,#ffd9a0,#f59e0b,#ea580c);color:#1a0f02}
-  .tl-dau img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff}
+  .tl-dau img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid #fff}
   .tl-dau b{display:block;font-size:15px}.tl-dau small{font-size:12px;font-weight:600;opacity:.85}
   .tl-dong{margin-left:auto;background:rgba(7,11,22,.15);border:0;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;color:#1a0f02}
   .tl-than{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
