@@ -36,6 +36,14 @@
   .marquee.dung .marquee-track { animation-play-state: paused; }
   .marquee:hover .marquee-track { animation-play-state: paused; }
   @keyframes scroll { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  /* Băng chuyền feedback: desktop chạy ngang phải -> trái */
+  @keyframes fb-x { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .fb-track-x { display: flex; width: max-content; animation: fb-x 55s linear infinite; }
+  .marquee:hover .fb-track-x { animation-play-state: paused; }
+  /* Băng chuyền feedback: mobile chạy dọc dưới -> lên, mỗi lần 1 ảnh */
+  .fb-viewport-y { height: 288px; overflow: hidden; mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent); }
+  @keyframes fb-y { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+  .fb-track-y { display: flex; flex-direction: column; animation: fb-y 40s linear infinite; }
   .blob { position: absolute; border-radius: 9999px; filter: blur(110px); opacity: .22; pointer-events: none; }
   details > summary::-webkit-details-marker { display: none; }
   /* Chỗ cần điền số liệu thật – nhìn thấy rõ để không quên thay trước khi chạy quảng cáo */
@@ -43,7 +51,7 @@
   .no-draft .can-dien { outline: none; background: none; padding: 0; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) { .marquee-track { animation-duration: 120s; } .cta-pulse { animation: none; } .reveal { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .marquee-track, .fb-track-x, .fb-track-y { animation-duration: 120s; } .cta-pulse { animation: none; } .reveal { opacity: 1; transform: none; } }
 </style>
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
@@ -90,9 +98,9 @@
       </div>
 
       <!-- Video mẫu do bộ công cụ làm ra -->
-      <div class="relative max-w-sm mx-auto w-full">
+      <div class="relative max-w-[240px] mx-auto w-full">
         <div class="card glow rounded-3xl p-3">
-          <img src="images/nang-ba-mmo.jpg" alt="Nàng Ba MMO – Người đồng hành chương trình" class="w-full aspect-[4/5] object-cover rounded-2xl">
+          <img src="images/nang-ba-mmo.jpg" alt="Nàng Ba MMO – Người đồng hành chương trình" class="w-full aspect-square object-cover rounded-2xl">
           <p class="mt-3 text-center text-sm font-bold text-white">🌸 Nàng Ba MMO</p>
           <p class="text-center text-xs text-slate-400 pb-1">AI Creator & Builder SAAS · Người đồng hành chương trình</p>
         </div>
@@ -380,7 +388,14 @@
     <p class="text-center text-xs font-bold uppercase tracking-[.25em] text-gold">Phản hồi thật từ cộng đồng</p>
     <h2 class="mt-3 text-center text-2xl sm:text-4xl font-black uppercase leading-tight">Cộng đồng nói gì<br><span class="inline-block mt-2 bg-gold text-ink px-3 rounded-lg">khi đồng hành cùng Nàng Ba</span></h2>
     <p class="mt-4 text-center text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">Ảnh chụp tin nhắn thật từ những người đã được Nàng Ba MMO chia sẻ và hướng dẫn. Tên và ảnh đại diện đã được che để giữ riêng tư.</p>
-    <div class="mt-10 columns-1 sm:columns-2 lg:columns-3 gap-4" id="testimonials"></div>
+    <!-- Desktop: băng chuyền ngang, chạy từ phải sang trái -->
+    <div class="marquee hidden sm:block mt-10">
+      <div class="fb-track-x" id="fb-track-x"></div>
+    </div>
+    <!-- Mobile: băng chuyền dọc, chạy từ dưới lên, mỗi lần 1 ảnh -->
+    <div class="fb-viewport-y sm:hidden mt-10">
+      <div class="fb-track-y" id="fb-track-y"></div>
+    </div>
     <div class="mt-4 card rounded-3xl p-5 sm:p-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
       <div>
         <span class="inline-block rounded-full bg-gold/15 border border-gold/40 text-gold2 text-xs font-bold px-3 py-1">Cộng đồng Nàng Ba MMO</span>
@@ -601,17 +616,31 @@ const o = (s, cls = '') => laChoTrong(s) ? `<span class="can-dien ${cls}">${esc(
 if (!CONFIG.hienChoCanDien) document.body.classList.add('no-draft');
 document.getElementById('nam').textContent = new Date().getFullYear();
 
-// Phản hồi khách hàng (ảnh chụp tin nhắn thật)
+// Phản hồi khách hàng (ảnh chụp tin nhắn thật) – băng chuyền vô hạn
+// Desktop: ngang phải -> trái · Mobile: dọc dưới -> lên, mỗi lần 1 ảnh
 if (!CONFIG.phanHoi.length) document.getElementById('phan-hoi').remove();
-else document.getElementById('testimonials').innerHTML = CONFIG.phanHoi.map(p => `
-  <figure class="card rounded-3xl overflow-hidden mb-4 break-inside-avoid">
-    <div class="p-5">
-      <span class="inline-block rounded-full bg-gold/15 border border-gold/40 text-gold2 text-xs font-bold px-3 py-1">${esc(p.nhan)}</span>
-      <blockquote class="mt-3 text-base font-semibold text-white leading-relaxed">“${esc(p.loi)}”</blockquote>
-      <p class="mt-2 text-gold text-sm">★★★★★</p>
-    </div>
-    <img src="images/${esc(p.anh)}" alt="Ảnh chụp tin nhắn của khách: ${esc(p.loi)}" loading="lazy" class="w-full border-t border-line">
-  </figure>`).join('');
+else {
+  const fbCardX = p => `
+  <figure class="relative shrink-0 w-[240px] h-64 mr-4 rounded-3xl overflow-hidden border border-line bg-navy">
+    <img src="images/${esc(p.anh)}" alt="Phản hồi của ${esc(p.nhan)}" loading="lazy" class="w-full h-full object-cover">
+    <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/70 to-transparent pt-10 pb-3 px-4 block">
+      <span class="text-sm font-bold text-white">${esc(p.nhan)}</span>
+      <span class="block text-gold text-xs mt-0.5">★★★★★</span>
+    </span>
+  </figure>`;
+  const fbCardY = p => `
+  <figure class="relative shrink-0 w-full h-72 mb-4 rounded-3xl overflow-hidden border border-line bg-navy">
+    <img src="images/${esc(p.anh)}" alt="Phản hồi của ${esc(p.nhan)}" loading="lazy" class="w-full h-full object-cover">
+    <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/70 to-transparent pt-10 pb-3 px-4 block">
+      <span class="text-sm font-bold text-white">${esc(p.nhan)}</span>
+      <span class="block text-gold text-xs mt-0.5">★★★★★</span>
+    </span>
+  </figure>`;
+  const fbX = CONFIG.phanHoi.map(fbCardX).join('');
+  document.getElementById('fb-track-x').innerHTML = fbX + fbX;
+  const fbY = CONFIG.phanHoi.map(fbCardY).join('');
+  document.getElementById('fb-track-y').innerHTML = fbY + fbY;
+}
 
 // Đếm ngược tới hạn cố định (để trống hanUuDai thì ẩn hết phần đếm ngược)
 const han = CONFIG.hanUuDai ? new Date(CONFIG.hanUuDai).getTime() : NaN;
