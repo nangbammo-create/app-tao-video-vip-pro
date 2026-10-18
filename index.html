@@ -199,9 +199,11 @@
 
   <!-- ===== 4. UY TÍN CÁ NHÂN ===== -->
   <section class="max-w-5xl mx-auto px-4 py-14 reveal">
-    <div class="card glow rounded-3xl p-6 sm:p-10 grid md:grid-cols-[220px_1fr] gap-8 items-center">
-      <img src="images/nang-ba-mmo.jpg" alt="Nàng Ba MMO – Người đồng hành chương trình" class="w-44 h-44 md:w-56 md:h-56 mx-auto rounded-full object-cover object-top border-4 border-gold/70">
-      <div>
+    <div class="card glow rounded-3xl p-6 sm:p-10 grid md:grid-cols-[auto_1fr] gap-8 items-center">
+      <div id="speaker-photo" class="mx-auto w-40 sm:w-48 aspect-[9/16] overflow-hidden rounded-2xl border-2 border-gold/40 shadow-lg">
+        <img src="images/nang-ba-mmo.jpg" alt="Nàng Ba MMO – Người đồng hành chương trình" class="w-full h-full object-cover">
+      </div>
+      <div id="speaker-text">
         <p class="text-xs font-bold uppercase tracking-[.25em] text-gold">Diễn giả chương trình</p>
         <h2 class="mt-2 text-3xl sm:text-4xl font-black"><span class="text-grad">Nàng Ba MMO</span></h2>
         <p class="mt-1 text-slate-300">AI Creator & Builder SAAS · Tài khoản AI – Tool APP – Phần mềm SAAS – Đồng Hành Ứng Dụng AI</p>
@@ -727,6 +729,24 @@ const canHero = () => {
 if (document.readyState === 'complete') canHero();
 else window.addEventListener('load', canHero);
 window.addEventListener('resize', canHero);
+
+// Speaker: chiều cao ảnh = tổng chiều cao khối chữ bên cạnh (chỉ desktop)
+const speakerText = document.getElementById('speaker-text');
+const speakerPhoto = document.getElementById('speaker-photo');
+const canSpeaker = () => {
+  if (!speakerText || !speakerPhoto) return;
+  if (window.innerWidth >= 768) {
+    const sh = speakerText.offsetHeight;
+    speakerPhoto.style.height = sh + 'px';
+    speakerPhoto.style.width = Math.round(sh * 9 / 16) + 'px';
+  } else {
+    speakerPhoto.style.height = '';
+    speakerPhoto.style.width = '';
+  }
+};
+if (document.readyState === 'complete') canSpeaker();
+else window.addEventListener('load', canSpeaker);
+window.addEventListener('resize', canSpeaker);
 
 // Hiệu ứng hiện dần khi cuộn
 const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: 0.08 });
