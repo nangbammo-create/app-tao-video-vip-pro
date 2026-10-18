@@ -120,14 +120,20 @@
         </div>
       </div>
 
-      <!-- Video mẫu do bộ công cụ làm ra -->
+      <!-- Video thành phẩm tạo ra từ App VIP Pro -->
       <div class="relative max-w-sm mx-auto w-full" id="hero-card">
         <div class="card glow rounded-3xl p-3">
-          <img src="images/nang-ba-mmo.jpg" alt="Nàng Ba MMO – Người đồng hành chương trình" class="w-full aspect-[9/16] object-cover rounded-2xl">
-          <p class="mt-3 text-center text-sm font-bold text-white">🌸 Nàng Ba MMO</p>
-          <p class="text-center text-xs text-slate-400 pb-1">AI Creator & Builder SAAS · Người đồng hành chương trình</p>
+          <div class="relative w-full aspect-[9/16] rounded-2xl overflow-hidden bg-black" id="video-stage">
+            <div id="video-placeholder" class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+              <span class="text-5xl">🎬</span>
+              <p class="mt-4 text-sm text-slate-300 leading-relaxed">8 video thành phẩm<br>từ App VIP Pro<br><span class="text-gold2 font-bold">sắp hiển thị tại đây</span></p>
+            </div>
+            <button id="video-mute" aria-label="Bật/tắt tiếng" class="absolute top-2 right-2 z-10 w-9 h-9 rounded-full bg-black/60 border border-white/20 text-base">🔇</button>
+            <div id="video-dots" class="absolute bottom-2.5 left-0 right-0 z-10 flex justify-center gap-1.5"></div>
+          </div>
+          <p class="mt-3 text-center text-sm font-black uppercase tracking-wide text-white">Video thành phẩm tạo ra từ <span class="text-grad">App VIP Pro</span></p>
         </div>
-        <div class="absolute -top-3 -right-2 sm:-right-5 rotate-6 rounded-2xl bg-flame text-white font-black px-3 py-2 text-sm shadow-lg">Marketing 0 đồng</div>
+        <div id="video-badge" class="absolute -top-3 -right-2 sm:-right-5 rotate-6 rounded-2xl bg-flame text-white font-black px-3 py-2 text-sm shadow-lg cursor-pointer select-none">Nhấp vào xem video</div>
       </div>    </div>
 
     <!-- 4 ý chính: nỗi đau · dành cho ai · giá trị · quà tặng -->
@@ -747,6 +753,57 @@ const canSpeaker = () => {
 if (document.readyState === 'complete') canSpeaker();
 else window.addEventListener('load', canSpeaker);
 window.addEventListener('resize', canSpeaker);
+
+// Carousel video thành phẩm App VIP Pro
+const videoStage = document.getElementById('video-stage');
+const videoMuteBtn = document.getElementById('video-mute');
+const videoBadge = document.getElementById('video-badge');
+const videoDotsBox = document.getElementById('video-dots');
+const videoPlaceholder = document.getElementById('video-placeholder');
+let videoMuted = true, videoIdx = 0;
+function videoList(){ return videoStage ? [...videoStage.querySelectorAll('video.vid')] : []; }
+function showVideo(n){
+  const vids = videoList();
+  if (!vids.length) return;
+  videoIdx = (n + vids.length) % vids.length;
+  if (videoPlaceholder) videoPlaceholder.style.display = 'none';
+  vids.forEach((v, i) => {
+    const active = i === videoIdx;
+    v.classList.toggle('opacity-0', !active);
+    if (active) { v.muted = videoMuted; v.play().catch(()=>{}); }
+    else { v.pause(); }
+  });
+  [...videoDotsBox.children].forEach((d, i) => {
+    d.className = 'h-2 rounded-full transition-all ' + (i === videoIdx ? 'w-5 bg-gold' : 'w-2 bg-white/40 hover:bg-white/70');
+  });
+}
+function toggleVideoMute(){
+  const vids = videoList();
+  if (!vids.length) return;
+  videoMuted = !videoMuted;
+  vids[videoIdx].muted = videoMuted;
+  videoMuteBtn.textContent = videoMuted ? '🔇' : '🔊';
+  videoBadge.innerHTML = videoMuted ? 'Nhấp vào xem video' : '🔊 Đang phát có tiếng';
+}
+function initVideoCarousel(){
+  const vids = videoList();
+  if (!vids.length || !videoStage) return;
+  vids.forEach((v, i) => {
+    v.classList.add('vid-active', 'absolute', 'inset-0', 'w-full', 'h-full', 'object-cover', 'transition-opacity', 'duration-500');
+    if (i > 0) v.classList.add('opacity-0');
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+    v.addEventListener('ended', () => showVideo(i + 1));
+    const d = document.createElement('button');
+    d.setAttribute('aria-label', 'Xem video ' + (i + 1));
+    d.onclick = () => showVideo(i);
+    videoDotsBox.appendChild(d);
+  });
+  videoMuteBtn.onclick = toggleVideoMute;
+  videoBadge.onclick = toggleVideoMute;
+  showVideo(0);
+}
+if (document.readyState === 'complete') initVideoCarousel();
+else window.addEventListener('load', initVideoCarousel);
 
 // Hiệu ứng hiện dần khi cuộn
 const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: 0.08 });
