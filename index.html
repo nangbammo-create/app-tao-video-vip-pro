@@ -15,8 +15,8 @@
       extend: {
         fontFamily: { sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif'] },
         colors: {
-          ink: '#070B16', navy: '#0B1224', navy2: '#111A33', line: '#1E2A4A',
-          gold: '#F5B83D', gold2: '#FFD978', flame: '#FF5A1F', flame2: '#FF8A3D',
+          ink: '#07130c', navy: '#0e2a1b', navy2: '#091b11', line: '#1f4d2e',
+          gold: '#f5b04c', gold2: '#ffd9a0', flame: '#ea580c', flame2: '#f97316',
         },
       },
     },
@@ -24,13 +24,13 @@
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { background: #070B16; color: #E8ECF6; }
-  .text-grad { background: linear-gradient(90deg, #FFD978, #F5B83D 40%, #FF8A3D 75%, #FF5A1F); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .bg-cta { background: linear-gradient(90deg, #FF5A1F, #FF8A3D 50%, #F5B83D); }
-  .card { background: linear-gradient(160deg, rgba(17,26,51,.92), rgba(11,18,36,.92)); border: 1px solid #1E2A4A; }
-  .glow { box-shadow: 0 0 0 1px rgba(245,184,61,.35), 0 20px 60px -20px rgba(255,90,31,.45); }
+  body { background: #07130c; color: #f2f7ef; }
+  .text-grad { background: linear-gradient(90deg,#ffd9a0,#f59e0b,#ea580c); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .bg-cta { background: linear-gradient(90deg,#ffd9a0,#f59e0b,#ea580c); }
+  .card { background: linear-gradient(160deg, rgba(14,42,27,.92), rgba(9,27,17,.92)); border: 1px solid #1f4d2e; }
+  .glow { box-shadow: 0 0 0 1px rgba(245,176,76,.35), 0 20px 60px -20px rgba(234,88,12,.45); }
   .cta-pulse { animation: pulse 2.2s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,138,61,.55); } 50% { box-shadow: 0 0 0 14px rgba(255,138,61,0); } }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(249,115,22,.55); } 50% { box-shadow: 0 0 0 14px rgba(249,115,22,0); } }
   .marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
   .marquee-track { display: flex; width: max-content; animation: scroll 70s linear infinite; }
   .marquee.dung .marquee-track { animation-play-state: paused; }
@@ -39,7 +39,7 @@
   .blob { position: absolute; border-radius: 9999px; filter: blur(110px); opacity: .22; pointer-events: none; }
   details > summary::-webkit-details-marker { display: none; }
   /* Chỗ cần điền số liệu thật – nhìn thấy rõ để không quên thay trước khi chạy quảng cáo */
-  .can-dien { outline: 1px dashed #F5B83D; outline-offset: 2px; background: rgba(245,184,61,.12); border-radius: 4px; padding: 0 3px; }
+  .can-dien { outline: 1px dashed #f5b04c; outline-offset: 2px; background: rgba(245,176,76,.12); border-radius: 4px; padding: 0 3px; }
   .no-draft .can-dien { outline: none; background: none; padding: 0; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
   .reveal.in { opacity: 1; transform: none; }
