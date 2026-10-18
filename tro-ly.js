@@ -1,14 +1,14 @@
 /* =========================================================
-   TRỢ LÝ ẢO TƯ VẤN 24/7 – Chương trình Đồng Hành 30 Ngày
+   TRỢ LÝ ẢO TƯ VẤN 24/7 – Chương trình Trải Nghiệm & Phát Triển App VIP Pro
    Gắn vào bất kỳ trang nào: <script src="tro-ly.js"></script>
    ========================================================= */
 (() => {
   const TRO_LY = {
-    ten: 'Phạm Dinh',
-    avatar: 'images/companion.jpg',
+    ten: 'Nàng Ba',
+    avatar: 'images/nang-ba-mmo.jpg',
     // Link nhóm Zalo riêng (dán vào đây khi có). Để trống thì dẫn về Zalo cá nhân.
-    zaloNhom: '',
-    zaloCaNhan: 'https://zalo.me/0915244329',
+    zaloNhom: 'https://zalo.me/g/dkeercivchvkddpj1avo',
+    zaloCaNhan: 'https://zalo.me/0785568539',
     // Kết nối CRM (Supabase): lấy từ CONFIG trong index.html
     crm: window.CRM || null,
     // true = dùng câu trả lời sửa trong trang quản trị (Supabase); lỗi mạng thì tự dùng kịch bản có sẵn bên dưới.
@@ -22,57 +22,58 @@
   /* ---------- KỊCH BẢN TƯ VẤN (dùng khi chưa bật AI hoặc AI lỗi) ---------- */
   const KICH_BAN = [
     { id: 'nguoi_may', tu: ['nguoi that', 'la may', 'robot', 'bot', 'la ai vay', 'tro ly ao', 'chatgpt'],
-      tra: ['Dạ, đây là phần trả lời tự động 24/7 của Dinh, để mình hỏi lúc nào cũng có câu trả lời ngay ạ 😊 Những câu cần tư vấn sâu hơn, mình vào nhóm Zalo là có chính Dinh và đội ngũ hỗ trợ trực tiếp luôn nhé.'],
+      tra: ['Dạ, đây là phần trả lời tự động 24/7 của Ba, để mình hỏi lúc nào cũng có câu trả lời ngay ạ 😊 Những câu cần tư vấn sâu hơn, mình vào nhóm Zalo là có chính Ba và đội ngũ hỗ trợ trực tiếp luôn nhé.'],
       zalo: true },
     { id: 'chao', tu: ['xin chao', 'chao', 'hello', 'hi', 'alo', 'co ai khong', 'shop oi', 'ad oi'],
-      tra: ['Dạ Dinh chào {ten} ạ 🌷 Rất vui vì mình ghé xem chương trình. Mình đang muốn tìm hiểu về giá, lộ trình học hay đang băn khoăn mình có làm được không ạ?',
-            'Chào {ten} nha 👋 Dinh đây. Mình cứ hỏi thoải mái, chuyện gì về chương trình Đồng Hành 30 Ngày Dinh cũng giải đáp được ạ.'] },
-    { id: 'gia', tu: ['gia', 'bao nhieu', 'hoc phi', 'chi phi', 'bao tien', 'nhieu tien', 'dat khong', 'dat qua'],
-      tra: ['Dạ, chương trình có giá niêm yết 2.999.000đ, đợt này đăng ký chỉ còn <b>1.499.000đ</b> (tiết kiệm 50%) cho 30 học viên đầu tiên ạ.<br><br>Dinh nói thật lòng nhé: chỉ cần 1 video lên xu hướng mang về 2–3 đơn là mình đã hoà vốn rồi, mà hệ thống thì dùng được mãi. Lại còn được hoàn tiền 100% trong 7 ngày nếu không thấy hữu ích nữa ạ 😊'],
-      nut: ['Gồm những gì?', 'Đăng ký ngay'] },
-    { id: 'hoan_tien', tu: ['hoan tien', 'hoan lai', 'bao hanh', 'khong hai long', 'rui ro', 'lua dao', 'uy tin', 'tin duoc khong'],
-      tra: ['Dinh hiểu mà, bỏ tiền ra học online ai cũng sợ "mua xong bị bỏ rơi" 🥲 Nên chương trình cam kết rõ: <b>hoàn tiền 100% trong 7 ngày</b>, không cần giải thích lý do. Mình cứ vào học buổi Zoom đầu, nhận tài liệu, dùng thử tool – thấy không hợp thì nhắn Zalo là được hoàn lại toàn bộ ạ. Rủi ro là của bên mình, không phải của {ten} đâu.'],
-      nut: ['Học phí bao nhiêu?', 'Đăng ký ngay'] },
+      tra: ['Dạ Ba chào {ten} ạ 🌷 Rất vui vì mình ghé xem chương trình <b>Trải Nghiệm & Phát Triển App VIP Pro</b>. Mình đang muốn tìm hiểu về quyền lợi, cách tham gia hay hoa hồng 90% ạ?',
+            'Chào {ten} nha 👋 Ba đây. Mình cứ hỏi thoải mái, chuyện gì về chương trình App VIP Pro Ba cũng giải đáp được ạ.'] },
+    { id: 'phi', tu: ['gia', 'bao nhieu', 'hoc phi', 'chi phi', 'bao tien', 'nhieu tien', 'dat khong', 'dat qua', 'mien phi', 'free', 'co mat phi', 'ton tien'],
+      tra: ['Dạ chương trình này <b>hoàn toàn miễn phí</b> ạ 🎉 {ten} được cấp quyền dùng app miễn phí, đồng hành feedback trong 1 tháng và tham gia các buổi Zoom hướng dẫn theo ngành hàng. Không mất phí gì hết nha.'],
+      nut: ['Tôi được gì khi tham gia?', 'Đăng ký thế nào?'] },
+    { id: 'quyen_loi', tu: ['duoc gi', 'quyen loi', 'loi ich', 'nhan duoc gi', 'gom nhung gi', 'gom gi'],
+      tra: ['Dạ, thành viên tiên phong được 6 quyền lợi ạ ✨<br>1️⃣ <b>Dùng app miễn phí</b> đầy đủ tính năng<br>2️⃣ <b>Đồng hành 1 tháng</b> – feedback để cùng nâng cấp lên VIP Pro<br>3️⃣ <b>Zoom hướng dẫn theo ngành hàng</b><br>4️⃣ <b>Zoom chiến lược phát triển thị trường</b><br>5️⃣ <b>Quyền thương mại sớm</b> App VIP Pro<br>6️⃣ Cơ hội <b>hoa hồng tới 90%</b>'],
+      nut: ['Hoa hồng 90% là sao?', 'Đăng ký thế nào?'] },
+    { id: 'hoa_hong', uuTien: 2, tu: ['hoa hong', 'thuong mai', 'ban hang', 'kiem tien', 'thu nhap', 'doi tac', '90'],
+      tra: ['Dạ, sau khi app hoàn thiện lên VIP Pro, thành viên tiên phong được <b>quyền thương mại sớm</b> ạ 💰 Mình cùng tham gia Zoom xây chiến lược phát triển thị trường, đưa app đến khách hàng mới – và có cơ hội nhận <b>hoa hồng lên tới 90%</b>. Người hiểu app sâu nhất (chính là mình, người đã trải nghiệm và góp ý từ đầu) sẽ là người bán tốt nhất đó ạ 😉'],
+      nut: ['Tôi được gì khi tham gia?', 'Đăng ký thế nào?'] },
+    { id: 'hanh_trinh', tu: ['lo trinh', 'hanh trinh', 'chuong trinh', 'lam gi', 'tham gia nhu the nao', 'cach thuc', 'buoc', 'quy trinh'],
+      tra: ['Dạ, hành trình có 4 phần ạ 🗺️<br><b>01 · Trải nghiệm miễn phí</b> – dùng ngay app đầy đủ tính năng<br><b>02 · Feedback trong 1 tháng</b> – góp ý để cùng nâng cấp lên VIP Pro<br><b>03 · Zoom hướng dẫn chuyên sâu</b> theo từng ngành hàng<br><b>04 · Phát triển & thương mại</b> – đưa app ra thị trường, nhận hoa hồng tới 90%'],
+      nut: ['Zoom theo ngành hàng là gì?', 'Đăng ký thế nào?'] },
+    { id: 'zoom_nganh', tu: ['zoom', 'nganh', 'linh vuc', 'huong dan', 'hoc'],
+      tra: ['Dạ, là buổi Zoom chia sẻ <b>cách dùng app cụ thể, dễ hiểu và thực chiến</b> cho đúng lĩnh vực {ten} đang theo đuổi, kèm ví dụ triển khai và giải đáp vướng mắc trong quá trình trải nghiệm ạ. Lịch Zoom được gửi trong nhóm riêng khi mình tham gia nhé.'],
+      zalo: true },
+    { id: 'feedback', tu: ['feedback', 'gop y', 'danh gia', 'phan hoi', 'trai nghiem'],
+      tra: ['Dạ, trong 1 tháng đồng hành, {ten} trải nghiệm app rồi <b>gửi phản hồi</b> về tính năng, nội dung, giao diện và đề xuất nhu cầu thực tế theo ngành của mình. Chính feedback của mình sẽ cùng đội ngũ hoàn thiện app lên phiên bản VIP Pro đó ạ ✨'],
+      nut: ['Tôi được gì khi tham gia?', 'Đăng ký thế nào?'] },
     { id: 'cong_nghe', tu: ['cong nghe', 'khong ranh', 'khong biet gi', 'nguoi moi', 'lon tuoi', 'co lam duoc', 'kho khong', 'de khong', 'may tinh', 'dien thoai', 'khong gioi'],
-      tra: ['{ten} yên tâm nha, rất nhiều chủ shop vào học cũng nói y câu này đó ạ 😄 Toàn bộ hệ thống được làm để mình chỉ cần <b>gõ chữ và bấm nút</b>: kịch bản có skill viết sẵn, tool dựng video làm theo từng bước. Trong 5 buổi Zoom mình làm cùng nhau trên màn hình, kẹt chỗ nào được gỡ ngay chỗ đó.<br><br>Dinh hay nói vui: dùng được Zalo với Facebook là học được chương trình này ạ 💪'],
-      nut: ['Lộ trình học thế nào?', 'Tôi bận lắm'] },
-    { id: 'affiliate', uuTien: 2, tu: ['affiliate', 'aff', 'tiep thi lien ket', 'hoa hong', 'tiktok shop', 'shopee', 'lazada', 'gan gio', 'gio hang', 'koc', 'kol'],
-      tra: ['Dạ có ạ, người làm <b>affiliate</b> là một trong những đối tượng hợp nhất với chương trình đó {ten} 💛 Làm affiliate thì cần <b>nhiều video mỗi ngày</b> để gắn giỏ hàng TikTok Shop, Shopee… mà quay thủ công thì không kịp.<br><br>Trong 30 ngày, mình sẽ học cách dùng AI <b>sản xuất video hàng loạt</b> cho từng sản phẩm, nắm <b>10 dạng video viral</b> và tư duy để làm bất kỳ dạng video nào, không cần lộ mặt. Mình đang làm affiliate trên nền tảng nào ạ?'],
-      nut: ['Học phí bao nhiêu?', 'Lộ trình học thế nào?'] },
-    { id: 'nganh', uuTien: 2, tu: ['nganh', 'linh vuc', 'bat dong san', 'my pham', 'spa', 'thoi trang', 'an uong', 'nha hang', 'bao hiem', 'tai chinh', 'giao duc', 'dich vu', 'phu hop', 'san pham cua toi', 'kinh doanh'],
-      tra: ['Dạ, chương trình làm được cho rất nhiều ngành ạ: gia dụng, ẩm thực, bất động sản, mỹ phẩm, mẹ và bé, thú cưng, thương hiệu cá nhân, TVC quảng cáo… Ngành nghiêm túc như bất động sản, tài chính, giáo dục cũng có dạng video chuyên gia, video giải đáp riêng, vẫn chỉn chu mà vẫn lên view tốt.<br><br>Mà ngành càng "khó", đối thủ càng làm video kém, cơ hội nổi bật của mình càng lớn đó {ten} 😉 Mình đang kinh doanh ngành gì ạ? Dinh gợi ý dạng video hợp với mình nhé.'],
-      zalo: true },
-    { id: 'thoi_gian', tu: ['ban qua', 'ban lam', 'ban rong', 'ban viec', 'thoi gian', 'khong co time', 'quay', 'lo mat', 'ngai', 'so len hinh', 'khong dam', 'xem lai', 'ghi hinh', 'ban ghi'],
-      tra: ['Chính vì {ten} bận nên mới cần hệ thống này đó ạ 🙌 Mình <b>không cần quay, không cần lộ mặt</b>: AI lo hình ảnh, giọng đọc và dựng video. Mỗi tuần chỉ cần khoảng 60 phút để sản xuất video cho cả tuần, đăng bài thì đã có quy trình tự động. Các buổi Zoom đều có bản ghi để xem lại nếu mình lỡ buổi nào ạ.'],
-      nut: ['Lộ trình học thế nào?', 'Học phí bao nhiêu?'] },
-    { id: 'lo_trinh', tu: ['lo trinh', 'zoom', 'buoi', 'hoc gi', 'noi dung', 'chuong trinh', 'gom nhung gi', 'gom gi', 'nhan duoc gi', 'hoc nhu the nao', 'hinh thuc'],
-      tra: ['Dạ, chương trình đồng hành 30 ngày với <b>5 buổi Zoom trực tiếp</b>:<br>1️⃣ Cài công cụ & làm video đầu tiên cho sản phẩm của bạn<br>2️⃣ Tặng 10 skill video AI viral & hướng dẫn từng bước cách làm các dạng video<br>3️⃣ Tạo skill, dùng skill & nâng cấp skill theo nhu cầu của từng người<br>4️⃣ Sản xuất video tự động & đăng bài đa nền tảng<br>5️⃣ Tổng kết, chữa bài từng người & hỏi đáp 1-1<br><br>Xuyên suốt 30 ngày có <b>bài tập mỗi ngày</b> và <b>chữa bài cho từng người</b> ạ ✨'],
-      nut: ['Quà tặng là gì?', 'Học phí bao nhiêu?'] },
-    { id: 'qua', tu: ['qua tang', 'nhan qua', 'qua gi', 'tang kem', 'tang gi', 'tool', 'skill', 'prompt', 'cong cu', 'phan mem', 'app'],
-      tra: ['Dạ, đăng ký chương trình bạn được tặng 3 món ạ 🎁<br>• <b>Tool đa ngành review bán hàng</b> (trị giá 699.000đ)<br>• <b>Tool 1 ảnh xây kênh đa nền tảng</b> (trị giá 699.000đ)<br>• <b>10 skill video AI viral</b> (trị giá 990.000đ), kèm hướng dẫn nâng cấp thành skill của riêng bạn.<br><br>Cả 2 tool đều được hướng dẫn cài đặt và sử dụng ngay trong buổi Zoom ạ.'],
-      zalo: true },
-    { id: 'ket_qua', tu: ['hieu qua', 'ket qua', 'thanh cong', 'trieu view', 'len xu huong', 'dam bao', 'chac chan', 'bang chung', 'that khong'],
-      tra: ['Câu hỏi rất đáng hỏi ạ 👍 Dinh đã tự kiểm chứng trên chính mình: mở <b>2 kênh mới tinh</b>, không quảng cáo, không người theo dõi, chỉ sau <b>5 ngày</b> đã vượt <b>2,2 triệu lượt xem</b> – có video đạt 1,3 triệu view. Ảnh chụp màn hình thật có ngay trên trang này đó ạ.<br><br>Dinh không dám hứa video nào cũng triệu view, vì còn tuỳ mình có làm bài đều không. Nhưng mình làm đúng hệ thống và có người sửa bài 1:1 thì cơ hội rất lớn ạ 💛'],
-      nut: ['Có hoàn tiền không?', 'Đăng ký ngay'] },
-    { id: 'lich', tu: ['khi nao', 'bat dau', 'khai giang', 'lich hoc', 'ngay nao', 'con suat', 'con cho', 'het han', 'may gio'],
-      tra: ['Dạ, đợt này chỉ nhận <b>30 học viên</b> để đảm bảo sửa bài 1:1 cho từng người, giá ưu đãi 1.499.000đ chỉ áp dụng cho 30 học viên đầu tiên của đợt này thôi ạ. Sau khi mình đăng ký và chuyển khoản, bên mình thêm mình vào nhóm học riêng, lịch Zoom cụ thể được gửi trong nhóm ạ.'],
-      nut: ['Đăng ký ngay', 'Vào nhóm Zalo'] },
-    { id: 'thanh_toan', tu: ['thanh toan', 'chuyen khoan', 'dang ky', 'mua', 'qr', 'so tai khoan', 'stk', 'tham gia', 'giu suat', 'chot'],
-      tra: ['Tuyệt vời quá {ten} ơi 🎉 Mình chỉ cần kéo xuống phần <b>Đăng ký giữ suất</b>, điền họ tên và số Zalo. Trang sẽ hiện ngay mã QR đúng số tiền, mình quét bằng app ngân hàng là xong. Chuyển khoản xong gửi ảnh qua Zalo để bên mình xếp lịch học nhé ạ.'],
+      tra: ['{ten} yên tâm nha 😄 App được làm để mình chỉ cần <b>gõ chữ và bấm nút</b> là dùng được. Trong các buổi Zoom, Ba hướng dẫn từng bước trên màn hình – kẹt chỗ nào được gỡ ngay chỗ đó. Dùng được Zalo với Facebook là tham gia được chương trình này ạ 💪'],
+      nut: ['Zoom theo ngành hàng là gì?', 'Đăng ký thế nào?'] },
+    { id: 'thoi_gian', tu: ['ban qua', 'ban lam', 'ban rong', 'ban viec', 'thoi gian', 'khong co time', 'xem lai', 'ghi hinh', 'ban ghi'],
+      tra: ['Dạ chương trình thiết kế cho người bận ạ 🙌 Mình trải nghiệm app theo nhịp của mình trong 1 tháng, gửi feedback khi rảnh. Các buổi Zoom đều được thông báo lịch trước trong nhóm riêng, lỡ buổi nào mình xem lại cũng được ạ.'],
+      nut: ['Tôi được gì khi tham gia?', 'Đăng ký thế nào?'] },
+    { id: 'ket_qua', tu: ['hieu qua', 'ket qua', 'thanh cong', 'uy tin', 'tin duoc khong', 'that khong', 'lua dao'],
+      tra: ['Dạ Ba hiểu mình cẩn trọng ạ 💛 Trên trang có hẳn mục <b>phản hồi thật từ cộng đồng</b> – toàn ảnh chụp tin nhắn thật của những người đã được Ba chia sẻ, hướng dẫn. Mình kéo lên xem nhé, còn băn khoăn gì cứ hỏi Ba tiếp ạ.'],
+      nut: ['Đăng ký thế nào?', 'Vào nhóm Zalo'] },
+    { id: 'lich', tu: ['khi nao', 'bat dau', 'khai giang', 'ngay nao', 'con suat', 'con cho', 'het han', 'may gio', 'suat'],
+      tra: ['Dạ, số lượng <b>thành viên tiên phong</b> mỗi đợt có giới hạn để đảm bảo chất lượng đồng hành ạ. Mình đăng ký sớm để giữ suất nhé – form đăng ký ngay bên dưới, điền xong là có thông tin tham gia liền ạ.'],
+      nut: ['Đăng ký thế nào?', 'Vào nhóm Zalo'] },
+    { id: 'dang_ky', tu: ['dang ky', 'tham gia', 'chot', 'giu suat', 'lam sao', 'dang ki'],
+      tra: ['Dạ đơn giản lắm {ten} ơi 🎉 Mình kéo xuống phần <b>Đăng ký thành viên tiên phong</b>, điền họ tên và số Zalo là xong. Ngay sau đó trang hiện <b>thông tin tham gia</b> – mình bấm vào nhóm Zalo để nhận quyền dùng app và lịch Zoom nhé ạ.'],
       nut: ['Mở form đăng ký'] },
     { id: 'zalo', tu: ['zalo', 'nhom', 'lien he', 'so dien thoai', 'sdt', 'hotline', 'goi dien', 'tu van truc tiep'],
-      tra: ['Dạ, mình vào nhóm Zalo riêng để nhận quà tặng và được tư vấn trực tiếp nhé {ten} 💬 Trong nhóm còn có tài liệu, video mẫu và giải đáp thường xuyên. Hoặc mình gọi/nhắn Zalo <b>0915 244 329</b> cũng được ạ.'],
+      tra: ['Dạ, mình vào nhóm Zalo riêng để nhận quyền dùng app và được tư vấn trực tiếp nhé {ten} 💬 Hoặc mình gọi/nhắn Zalo <b>0785 568 539</b> cũng được ạ.'],
       zalo: true },
     { id: 'cam_on', tu: ['cam on', 'thanks', 'thank', 'ok', 'oke', 'duoc roi', 'hieu roi', 'tuyet'],
-      tra: ['Dạ không có gì đâu {ten} ơi 🥰 Mình còn băn khoăn gì cứ hỏi Dinh nhé. Nếu muốn nhận quà và xem thêm video mẫu thì vào nhóm Zalo riêng ạ.'],
+      tra: ['Dạ không có gì đâu {ten} ơi 🥰 Mình còn băn khoăn gì cứ hỏi Ba nhé. Đăng ký xong nhớ vào nhóm Zalo để nhận app nha.'],
       zalo: true },
   ];
+
   const TRA_LOI_KHAC = [
-    'Câu này Dinh muốn tư vấn trực tiếp cho {ten} mới kỹ được ạ 💛 Mình để lại <b>số Zalo</b> ngay trong khung chat này, Dinh sẽ nhắn riêng cho mình nhé. Hoặc vào nhóm Zalo để nhận quà và hỏi thoải mái ạ.',
-    'Câu này hay quá, Dinh muốn trả lời {ten} thật kỹ nên mời mình vào nhóm Zalo riêng để trao đổi trực tiếp nhé 💛 Trong nhóm còn có quà tặng và nhiều thông tin về khoá học nữa ạ.',
-    'Dạ Dinh ghi nhận câu hỏi của {ten} rồi ạ. Để được giải đáp cặn kẽ và đúng với trường hợp của mình nhất, mình vào nhóm Zalo riêng nhé – vừa có người tư vấn trực tiếp, vừa nhận được quà tặng ạ 🎁',
+    'Câu này Ba muốn tư vấn trực tiếp cho {ten} mới kỹ được ạ 💛 Mình để lại <b>số Zalo</b> ngay trong khung chat này, Ba sẽ nhắn riêng cho mình nhé. Hoặc vào nhóm Zalo để hỏi thoải mái ạ.',
+    'Câu này hay quá, Ba muốn trả lời {ten} thật kỹ nên mời mình vào nhóm Zalo riêng để trao đổi trực tiếp nhé 💛 Trong nhóm còn có nhiều thông tin về chương trình nữa ạ.',
+    'Dạ Ba ghi nhận câu hỏi của {ten} rồi ạ. Để được giải đáp cặn kẽ và đúng với trường hợp của mình nhất, mình vào nhóm Zalo riêng nhé – vừa có người tư vấn trực tiếp, vừa nhận được quyền dùng app ạ 🎁',
   ];
-  const NUT_MAC_DINH = ['Học phí bao nhiêu?', 'Tôi không rành công nghệ', 'Lộ trình học thế nào?', 'Quà tặng là gì?'];
+  const NUT_MAC_DINH = ['Chương trình có mất phí không?', 'Tôi được gì khi tham gia?', 'Hoa hồng 90% là sao?', 'Đăng ký thế nào?'];
   let kichBan = KICH_BAN;
 
   /* ---------- XỬ LÝ CHỮ ---------- */
@@ -135,7 +136,7 @@
       <div class="tl-dau"><img src="${TRO_LY.avatar}" alt=""><div><b>${TRO_LY.ten} · Tư vấn</b><small>● Trả lời tự động 24/7</small></div><button class="tl-dong" aria-label="Đóng">✕</button></div>
       <div class="tl-than" id="tl-than"></div>
       <form class="tl-nhap" id="tl-form"><input id="tl-o" maxlength="500" autocomplete="off" placeholder="Nhập câu hỏi của bạn…"><button type="submit">Gửi</button></form>
-      <div class="tl-chan">Muốn nhắn trực tiếp với Dinh? Zalo 0915 244 329</div>
+      <div class="tl-chan">Muốn nhắn trực tiếp với Ba? Zalo 0785 568 539</div>
     </div>`);
 
   const $ = id => document.getElementById(id);
@@ -227,7 +228,7 @@
     const g = dangGo();
     let tl;
     const batDau = Date.now();
-    tl = sdt ? { text: goi(`Dạ Dinh đã lưu số <b>${sdt}</b> rồi ạ 💛 Dinh sẽ nhắn riêng tư vấn cho {ten} sớm nhất. Trong lúc chờ, mình vào nhóm Zalo để nhận quà trước nhé!`), zalo: true, nut: [] } : traLoiKichBan(raw);
+    tl = sdt ? { text: goi(`Dạ Ba đã lưu số <b>${sdt}</b> rồi ạ 💛 Ba sẽ nhắn riêng tư vấn cho {ten} sớm nhất. Trong lúc chờ, mình vào nhóm Zalo để nhận app trước nhé!`), zalo: true, nut: [] } : traLoiKichBan(raw);
     // Thời gian "đang gõ" tự nhiên theo độ dài câu trả lời
     const cho = Math.min(2600, 700 + tl.text.length * 6) - (Date.now() - batDau);
     if (cho > 0) await doi(cho);
@@ -245,8 +246,8 @@
     if (!daMo) {
       daMo = true;
       const g = dangGo(); await doi(900); g.remove();
-      themTin(`Dạ, Dinh chào bạn 🌷 Đây là khung tư vấn tự động 24/7 của <b>Phạm Dinh AI</b>.<br><br>Bạn đang tìm hiểu chương trình <b>Đồng Hành 30 Ngày – Làm Video Bán Hàng Bằng AI</b> phải không ạ? Bạn có băn khoăn gì, cứ hỏi Dinh thoải mái nhé 😊`, 'bot');
-      lichSu.push({ role: 'model', text: 'Chào bạn, Dinh đây (tư vấn tự động 24/7 của Phạm Dinh AI). Bạn có băn khoăn gì cứ hỏi nhé.' });
+      themTin(`Dạ, Ba chào bạn 🌷 Đây là khung tư vấn tự động 24/7 của <b>Nàng Ba MMO</b>.<br><br>Bạn đang tìm hiểu chương trình <b>Trải Nghiệm & Phát Triển App VIP Pro</b> phải không ạ? Bạn có băn khoăn gì, cứ hỏi Ba thoải mái nhé 😊`, 'bot');
+      lichSu.push({ role: 'model', text: 'Chào bạn, Ba đây (tư vấn tự động 24/7 của Nàng Ba MMO). Bạn có băn khoăn gì cứ hỏi nhé.' });
       themNut(NUT_MAC_DINH);
     }
     if (window.innerWidth >= 640) o.focus();
@@ -259,7 +260,7 @@
 
   setTimeout(() => {
     if (daMo) return;
-    moi.innerHTML = '👋 Chào bạn! Dinh có thể giúp gì cho bạn về chương trình 30 ngày không ạ?';
+    moi.innerHTML = '👋 Chào bạn! Ba có thể giúp gì cho bạn về chương trình App VIP Pro không ạ?';
     moi.style.display = 'block';
   }, TRO_LY.chaoSau * 1000);
 })();
