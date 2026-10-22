@@ -1,5 +1,5 @@
 /* =========================================================
-   TRỢ LÝ ẢO TƯ VẤN 24/7 – Chương trình Trải Nghiệm & Phát Triển App VIP Pro
+   TRỢ LÝ ẢO TƯ VẤN 24/7 – Chương trình Trải Nghiệm App Tạo Video VIP Pro
    Gắn vào bất kỳ trang nào: <script src="tro-ly.js"></script>
    ========================================================= */
 (() => {
@@ -25,8 +25,8 @@
       tra: ['Dạ, đây là phần trả lời tự động 24/7 của Ba, để mình hỏi lúc nào cũng có câu trả lời ngay ạ 😊 Những câu cần tư vấn sâu hơn, mình vào nhóm Zalo là có chính Ba và đội ngũ hỗ trợ trực tiếp luôn nhé.'],
       zalo: true },
     { id: 'chao', tu: ['xin chao', 'chao', 'hello', 'hi', 'alo', 'co ai khong', 'shop oi', 'ad oi'],
-      tra: ['Dạ Ba chào {ten} ạ 🌷 Rất vui vì mình ghé xem chương trình <b>Trải Nghiệm – Sở Hữu – Hợp Tác Affiliate App VIP Pro</b>. Mình đang muốn tìm hiểu về phí giữ suất, quyền lợi hay hoa hồng 50% ạ?',
-            'Chào {ten} nha 👋 Ba đây. Mình cứ hỏi thoải mái, chuyện gì về chương trình App VIP Pro Ba cũng giải đáp được ạ.'] },
+      tra: ['Dạ Ba chào {ten} ạ 🌷 Rất vui vì mình ghé xem chương trình <b>Trải Nghiệm – Sở Hữu – Hợp Tác Affiliate App Tạo Video VIP Pro</b>. Mình đang muốn tìm hiểu về phí giữ suất, quyền lợi hay hoa hồng 50% ạ?',
+            'Chào {ten} nha 👋 Ba đây. Mình cứ hỏi thoải mái, chuyện gì về chương trình App Tạo Video VIP Pro Ba cũng giải đáp được ạ.'] },
     { id: 'phi', tu: ['gia', 'bao nhieu', 'hoc phi', 'chi phi', 'bao tien', 'nhieu tien', 'dat khong', 'dat qua', 'phi giu suat', '55', 'moi cafe', 'co mat phi', 'ton tien'],
       tra: ['Dạ phí giữ suất là <b>55.000đ</b> thôi ạ ☕ (như mời Ba ly cà phê). {ten} điền form rồi quét mã QR với nội dung <b>MOI CAFE BA</b> là xong. Sau đó được trải nghiệm app miễn phí, feedback 1 tháng và Zoom/Video hướng dẫn chi tiết cách sử dụng nha.'],
       nut: ['Sở hữu app giảm 30% là sao?', 'Giữ suất thế nào?'] },
@@ -37,7 +37,7 @@
       tra: ['Dạ sau thời gian trải nghiệm, nếu {ten} muốn sở hữu app để dùng lâu dài thì được mua với <b>giá ưu đãi giảm 30% so với giá gốc</b> ạ 💎 Chỉ dành cho thành viên chương trình thôi nha.'],
       nut: ['Hoa hồng affiliate 50% là sao?', 'Giữ suất thế nào?'] },
     { id: 'affiliate', tu: ['affiliate', 'hoa hong', '50%', 'gioi thieu', 'tiep thi lien ket'],
-      tra: ['Dạ khi {ten} sở hữu app và tham gia <b>hợp tác affiliate</b>, mỗi lượt giới thiệu App VIP Pro thành công mình nhận <b>hoa hồng 50%</b> ạ 🤝 Cách làm được hướng dẫn chi tiết trong nhóm Zalo riêng nha.'],
+      tra: ['Dạ khi {ten} sở hữu app và tham gia <b>hợp tác affiliate</b>, mỗi lượt giới thiệu App Tạo Video VIP Pro thành công mình nhận <b>hoa hồng 50%</b> ạ 🤝 Cách làm được hướng dẫn chi tiết trong nhóm Zalo riêng nha.'],
       nut: ['Sở hữu app giảm 30% là sao?', 'Giữ suất thế nào?'] },
     { id: 'trai_nghiem', tu: ['trai nghiem', 'dung thu', 'free', 'mien phi'],
       tra: ['Dạ sau khi giữ suất (55.000đ), {ten} được <b>cấp quyền dùng app miễn phí</b> đầy đủ tính năng trong suốt chương trình, đồng hành feedback trong 1 tháng luôn ạ 🆓'],
@@ -53,7 +53,7 @@
       tra: ['Dạ {ten} vào nhóm Zalo riêng của chương trình nha 👉 <b>Nhóm Zalo</b> – trong nhóm có hướng dẫn nhận app, lịch Zoom/Video hướng dẫn và được Ba hỗ trợ trực tiếp ạ.'],
       zalo: true },
     { id: 'chuong_trinh', tu: ['chuong trinh', 'app vip pro', 'app gi', 'noi dung'],
-      tra: ['Dạ chương trình <b>Trải Nghiệm – Sở Hữu – Hợp Tác Affiliate App VIP Pro</b> có 3 chặng ạ: ① <b>Trải nghiệm</b> app miễn phí + feedback 1 tháng + Zoom/Video hướng dẫn chi tiết cách sử dụng ② <b>Sở hữu</b> app giảm 30% so với giá gốc ③ <b>Hợp tác affiliate</b> với hoa hồng 50%. Phí giữ suất chỉ 55.000đ thôi ạ ☕'],
+      tra: ['Dạ chương trình <b>Trải Nghiệm – Sở Hữu – Hợp Tác Affiliate App Tạo Video VIP Pro</b> có 3 chặng ạ: ① <b>Trải nghiệm</b> app miễn phí + feedback 1 tháng + Zoom/Video hướng dẫn chi tiết cách sử dụng ② <b>Sở hữu</b> app giảm 30% so với giá gốc ③ <b>Hợp tác affiliate</b> với hoa hồng 50%. Phí giữ suất chỉ 55.000đ thôi ạ ☕'],
       nut: ['Phí giữ suất bao nhiêu?', 'Giữ suất thế nào?'] },
   ];
 
@@ -235,7 +235,7 @@
     if (!daMo) {
       daMo = true;
       const g = dangGo(); await doi(900); g.remove();
-      themTin(`Dạ, Ba chào bạn 🌷 Đây là khung tư vấn tự động 24/7 của <b>Nàng Ba MMO</b>.<br><br>Bạn đang tìm hiểu chương trình <b>Trải Nghiệm & Phát Triển App VIP Pro</b> phải không ạ? Bạn có băn khoăn gì, cứ hỏi Ba thoải mái nhé 😊`, 'bot');
+      themTin(`Dạ, Ba chào bạn 🌷 Đây là khung tư vấn tự động 24/7 của <b>Nàng Ba MMO</b>.<br><br>Bạn đang tìm hiểu chương trình <b>Trải Nghiệm App Tạo Video VIP Pro</b> phải không ạ? Bạn có băn khoăn gì, cứ hỏi Ba thoải mái nhé 😊`, 'bot');
       lichSu.push({ role: 'model', text: 'Chào bạn, Ba đây (tư vấn tự động 24/7 của Nàng Ba MMO). Bạn có băn khoăn gì cứ hỏi nhé.' });
       themNut(NUT_MAC_DINH);
     }
@@ -249,7 +249,7 @@
 
   setTimeout(() => {
     if (daMo) return;
-    moi.innerHTML = '👋 Chào bạn! Ba có thể giúp gì cho bạn về chương trình App VIP Pro không ạ?';
+    moi.innerHTML = '👋 Chào bạn! Ba có thể giúp gì cho bạn về chương trình App Tạo Video VIP Pro không ạ?';
     moi.style.display = 'block';
   }, TRO_LY.chaoSau * 1000);
 })();
