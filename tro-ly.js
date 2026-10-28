@@ -29,19 +29,19 @@
             'Chào {ten} nha 👋 Ba đây. Mình cứ hỏi thoải mái, chuyện gì về chương trình App Tạo Video VIP Pro Ba cũng giải đáp được ạ.'] },
     { id: 'phi', tu: ['gia', 'bao nhieu', 'hoc phi', 'chi phi', 'bao tien', 'nhieu tien', 'dat khong', 'dat qua', 'phi giu suat', '55', 'moi cafe', 'co mat phi', 'ton tien'],
       tra: ['Dạ phí giữ suất là <b>55.000đ</b> thôi ạ ☕ (như mời Ba ly cà phê). {ten} điền form rồi quét mã QR với nội dung <b>MOI CAFE BA</b> là xong. Sau đó được trải nghiệm app miễn phí, feedback 1 tháng và Zoom/Video hướng dẫn chi tiết cách sử dụng nha.'],
-      nut: ['Sở hữu app vĩnh viễn là sao?', 'Giữ suất thế nào?'] },
+      nut: ['Sở hữu app giảm 30% là sao?', 'Giữ suất thế nào?'] },
     { id: 'quyen_loi', tu: ['duoc gi', 'quyen loi', 'loi ich', 'nhan duoc gi', 'gom nhung gi', 'gom gi'],
-      tra: ['Dạ, chương trình có 3 chặng rõ ràng ạ ✨<br>1️⃣ <b>TRẢI NGHIỆM:</b> dùng app miễn phí, feedback trong 1 tháng, Zoom/Video hướng dẫn chi tiết cách sử dụng<br>2️⃣ <b>SỞ HỮU:</b> mua app vĩnh viễn với giá <b>499k so với giá gốc 999k</b><br>3️⃣ <b>HỢP TÁC AFFILIATE:</b> giới thiệu app, nhận <b>hoa hồng 50%</b>'],
+      tra: ['Dạ, chương trình có 3 chặng rõ ràng ạ ✨<br>1️⃣ <b>TRẢI NGHIỆM:</b> dùng app miễn phí, feedback trong 1 tháng, Zoom/Video hướng dẫn chi tiết cách sử dụng<br>2️⃣ <b>SỞ HỮU:</b> mua app với giá ưu đãi <b>giảm 30%</b> so với giá gốc<br>3️⃣ <b>HỢP TÁC AFFILIATE:</b> giới thiệu app, nhận <b>hoa hồng 50%</b>'],
       nut: ['Hoa hồng affiliate 50% là sao?', 'Giữ suất thế nào?'] },
-    { id: 'so_huu', tu: ['so huu', 'mua app', 'giam 30', 'vinh vien', 'uu dai', 'gia goc'],
-      tra: ['Dạ sau thời gian trải nghiệm, nếu {ten} muốn sở hữu app để dùng lâu dài thì được mua vĩnh viễn với <b>giá 499k so với giá gốc 999k</b> ạ 💎 Chỉ dành cho thành viên chương trình thôi nha.'],
+    { id: 'so_huu', tu: ['so huu', 'mua app', 'giam 30', 'uu dai', 'gia goc'],
+      tra: ['Dạ sau thời gian trải nghiệm, nếu {ten} muốn sở hữu app để dùng lâu dài thì được mua với <b>giá ưu đãi giảm 30% so với giá gốc</b> ạ 💎 Chỉ dành cho thành viên chương trình thôi nha.'],
       nut: ['Hoa hồng affiliate 50% là sao?', 'Giữ suất thế nào?'] },
     { id: 'affiliate', tu: ['affiliate', 'hoa hong', '50%', 'gioi thieu', 'tiep thi lien ket'],
       tra: ['Dạ khi {ten} sở hữu app và tham gia <b>hợp tác affiliate</b>, mỗi lượt giới thiệu App Tạo Video VIP Pro thành công mình nhận <b>hoa hồng 50%</b> ạ 🤝 Cách làm được hướng dẫn chi tiết trong nhóm Zalo riêng nha.'],
-      nut: ['Sở hữu app vĩnh viễn là sao?', 'Giữ suất thế nào?'] },
+      nut: ['Sở hữu app giảm 30% là sao?', 'Giữ suất thế nào?'] },
     { id: 'trai_nghiem', tu: ['trai nghiem', 'dung thu', 'free', 'mien phi'],
       tra: ['Dạ sau khi giữ suất (55.000đ), {ten} được <b>cấp quyền dùng app miễn phí</b> đầy đủ tính năng trong suốt chương trình, đồng hành feedback trong 1 tháng luôn ạ 🆓'],
-      nut: ['Sở hữu app vĩnh viễn là sao?', 'Giữ suất thế nào?'] },
+      nut: ['Sở hữu app giảm 30% là sao?', 'Giữ suất thế nào?'] },
     { id: 'zoom', tu: ['zoom', 'hoc online', 'huong dan', 'nganh hang'],
       tra: ['Dạ là buổi <b>Zoom/Video hướng dẫn chi tiết cách sử dụng</b> app cho {ten} đó ạ, kèm ví dụ triển khai và giải đáp vướng mắc luôn. Lịch được gửi trong nhóm riêng khi mình tham gia nha.'] },
     { id: 'feedback', tu: ['feedback', 'gop y', '1 thang', 'mot thang', 'lam gi'],
@@ -53,7 +53,7 @@
       tra: ['Dạ {ten} vào nhóm Zalo riêng của chương trình nha 👉 <b>Nhóm Zalo</b> – trong nhóm có hướng dẫn nhận app, lịch Zoom/Video hướng dẫn và được Ba hỗ trợ trực tiếp ạ.'],
       zalo: true },
     { id: 'chuong_trinh', tu: ['chuong trinh', 'app vip pro', 'app gi', 'noi dung'],
-      tra: ['Dạ chương trình <b>Trải Nghiệm – Sở Hữu – Hợp Tác Affiliate App Tạo Video VIP Pro</b> có 3 chặng ạ: ① <b>Trải nghiệm</b> app miễn phí + feedback 1 tháng + Zoom/Video hướng dẫn chi tiết cách sử dụng ② <b>Sở hữu</b> app vĩnh viễn giá 499k so với giá gốc 999k ③ <b>Hợp tác affiliate</b> với hoa hồng 50%. Phí giữ suất chỉ 55.000đ thôi ạ ☕'],
+      tra: ['Dạ chương trình <b>Trải Nghiệm – Sở Hữu – Hợp Tác Affiliate App Tạo Video VIP Pro</b> có 3 chặng ạ: ① <b>Trải nghiệm</b> app miễn phí + feedback 1 tháng + Zoom/Video hướng dẫn chi tiết cách sử dụng ② <b>Sở hữu</b> app giảm 30% so với giá gốc ③ <b>Hợp tác affiliate</b> với hoa hồng 50%. Phí giữ suất chỉ 55.000đ thôi ạ ☕'],
       nut: ['Phí giữ suất bao nhiêu?', 'Giữ suất thế nào?'] },
   ];
 
@@ -62,7 +62,7 @@
     'Câu này hay quá, Ba muốn trả lời {ten} thật kỹ nên mời mình vào nhóm Zalo riêng để trao đổi trực tiếp nhé 💛 Trong nhóm còn có nhiều thông tin về chương trình nữa ạ.',
     'Dạ Ba ghi nhận câu hỏi của {ten} rồi ạ. Để được giải đáp cặn kẽ và đúng với trường hợp của mình nhất, mình vào nhóm Zalo riêng nhé – vừa có người tư vấn trực tiếp, vừa nhận được quyền dùng app ạ 🎁',
   ];
-  const NUT_MAC_DINH = ['Phí giữ suất bao nhiêu?', 'Sở hữu app vĩnh viễn là sao?', 'Hoa hồng affiliate 50% là sao?', 'Giữ suất thế nào?'];
+  const NUT_MAC_DINH = ['Phí giữ suất bao nhiêu?', 'Sở hữu app giảm 30% là sao?', 'Hoa hồng affiliate 50% là sao?', 'Giữ suất thế nào?'];
   let kichBan = KICH_BAN;
 
   /* ---------- XỬ LÝ CHỮ ---------- */
