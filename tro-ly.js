@@ -44,8 +44,6 @@
       nut: ['Sở hữu app giảm 30% là sao?', 'Giữ suất thế nào?'] },
     { id: 'zoom', tu: ['zoom', 'hoc online', 'huong dan', 'nganh hang'],
       tra: ['Dạ là buổi <b>Zoom/Video hướng dẫn chi tiết cách sử dụng</b> app cho {ten} đó ạ, kèm ví dụ triển khai và giải đáp vướng mắc luôn. Lịch được gửi trong nhóm riêng khi mình tham gia nha.'] },
-    { id: 'feedback', tu: ['feedback', 'gop y', '1 thang', 'mot thang', 'lam gi'],
-      tra: ['Dạ trong 1 tháng đồng hành, {ten} trải nghiệm app rồi <b>gửi phản hồi</b> về tính năng, nội dung, giao diện và đề xuất nhu cầu thực tế theo ngành của mình nha. Chính feedback của mình sẽ cùng đội ngũ hoàn thiện app lên VIP Pro đó ạ 💪'] },
     { id: 'dang_ky', tu: ['dang ky', 'giu suat', 'tham gia', 'dang ki', 'ghi danh', 'dat cho'],
       tra: ['Dạ đơn giản lắm ạ ⚡ {ten} bấm nút <b>GIỮ SUẤT</b>, điền form 20 giây, rồi quét mã QR <b>55.000đ</b> với nội dung <b>MOI CAFE BA</b> là xong. Sau đó vào nhóm Zalo để nhận quyền dùng app nha.'],
       nut: ['Phí giữ suất bao nhiêu?', 'Tôi được gì khi tham gia?'] },
